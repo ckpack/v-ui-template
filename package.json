@@ -1,5 +1,5 @@
 {
-  "name": "@ckpack/v-ui-template",
+  "name": "v-ui-template",
   "sideEffects": false,
   "description": "Quickly create templates for vue sfc components",
   "version": "0.0.10",
