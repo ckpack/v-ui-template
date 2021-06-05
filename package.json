@@ -1,12 +1,11 @@
 {
   "name": "v-ui-template",
+  "sideEffects": false,
   "description": "Quickly create templates for vue sfc components",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "repository": "https://github.com/ckpack/v-ui-template",
   "main": "dist/index.js",
-  "browser": "dist/index.min.js",
   "module": "dist/index.js",
-  "unpkg": "dist/index.js",
   "style": "dist/index.css",
   "keywords": [
     "v-ui-template",
@@ -15,11 +14,12 @@
   ],
   "files": [
     "dist/*",
-    "src/*"
+    "src/*",
+    "libs/*"
   ],
   "scripts": {
     "serve": "yarn build && vue-cli-service serve dev/serve.js",
-    "build": "rm -rf ./dist && rollup --config ./build/rollup.config.js",
+    "build": "rm -rf ./dist && rm -rf ./libs && rollup --config ./build/rollup.config.js",
     "lint": "eslint --fix --ext .js,.vue ./",
     "gen": "bash ./scripts/gc.sh"
   },

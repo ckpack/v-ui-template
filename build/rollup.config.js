@@ -51,7 +51,7 @@ export default [
     input: path.resolve(__dirname, `../src/components/${componentName}`),
     output: {
       format: 'esm',
-      file: `dist/${componentName}/index.js`,
+      file: `libs/${componentName}/index.js`,
     },
     plugins: [
       plugins.alias,
@@ -59,7 +59,7 @@ export default [
       plugins.resolve,
       plugins.vue,
       postcss({
-        extract: path.resolve(`dist/${componentName}/index.css`),
+        extract: path.resolve(`libs/${componentName}/index.css`),
       }),
     ],
     external,
@@ -83,7 +83,26 @@ export default [
     input: path.resolve(__dirname, '../src/k-ui'),
     output: {
       format: 'iife',
-      file: 'dist/index.min.js',
+      file: 'dist/index.global.js',
+      name,
+    },
+    plugins: [
+      plugins.alias,
+      plugins.replace,
+      plugins.resolve,
+      plugins.vue,
+      postcss({
+        minimize: false,
+        extract: 'index.global.css',
+      }),
+    ],
+    external,
+  },
+  {
+    input: path.resolve(__dirname, '../src/k-ui'),
+    output: {
+      format: 'iife',
+      file: 'dist/index.global.min.js',
       name,
     },
     plugins: [
@@ -93,7 +112,7 @@ export default [
       plugins.vue,
       postcss({
         minimize: true,
-        extract: 'index.min.css',
+        extract: 'index.global.min.css',
       }),
       plugins.terser,
     ],
