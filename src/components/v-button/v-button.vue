@@ -1,18 +1,18 @@
 <template>
-  <button class="k-button">
+  <button class="v-button">
     <slot></slot>
   </button>
 </template>
 
 <script>
 export default {
-  name: 'k-button',
+  name: 'v-button',
 };
 </script>
 
 <style lang="scss">
 @import '../../styles/var.scss';
-.k-button {
+.v-button {
   background-color: $red;
 }
 </style>

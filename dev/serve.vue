@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <k-button @click="handlerClick">Test</k-button>
-    <k-label :label="count"></k-label>
+    <v-button @click="handlerClick">Test</v-button>
+    <v-label :label="count"></v-label>
   </div>
 </template>
 <script>

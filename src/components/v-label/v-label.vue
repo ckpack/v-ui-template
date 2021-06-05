@@ -1,12 +1,12 @@
 <template>
-  <div class="k-label">
+  <div class="v-label">
     {{label}}
   </div>
 </template>
 
 <script>
 export default {
-  name: 'k-label',
+  name: 'v-label',
   props: {
     label: [String, Number],
   },
@@ -20,7 +20,7 @@ export default {
 
 <style lang="scss">
 @import '../../styles/var.scss';
-.k-label {
+.v-label {
   background-color: $red;
 }
 </style>

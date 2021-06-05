@@ -43,8 +43,13 @@ const plugins = {
 };
 
 const external = ['vue'];
+const globals = {
+  // Provide global variable names to replace your external imports
+  // eg. jquery: '$'
+  vue: 'Vue',
+};
 
-const components = fs.readdirSync(path.resolve(__dirname, '../src/components')).filter((componentName) => /^k-.+/.test(componentName));
+const components = fs.readdirSync(path.resolve(__dirname, '../src/components')).filter((componentName) => /^v-.+/.test(componentName));
 
 export default [
   ...components.map((componentName) => ({
@@ -85,6 +90,7 @@ export default [
       format: 'iife',
       file: 'dist/index.global.js',
       name,
+      globals,
     },
     plugins: [
       plugins.alias,
@@ -104,6 +110,7 @@ export default [
       format: 'iife',
       file: 'dist/index.global.min.js',
       name,
+      globals,
     },
     plugins: [
       plugins.alias,
