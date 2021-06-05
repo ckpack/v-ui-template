@@ -5,9 +5,9 @@
   </div>
 </template>
 <script>
-import { defineComponent, ref } from 'vue';
+import { ref } from 'vue';
 
-export default defineComponent({
+export default {
   name: 'ServeDev',
   setup() {
     const count = ref(0);
@@ -20,5 +20,5 @@ export default defineComponent({
       this.count += 1;
     },
   },
-});
+};
 </script>

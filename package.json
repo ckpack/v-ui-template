@@ -1,12 +1,29 @@
 {
-  "name": "@ckpack/v-ui-template",
+  "name": "v-ui-template",
   "description": "Quickly create templates for vue sfc components",
+  "version": "0.0.1",
+  "repository": "https://github.com/ckpack/v-ui-template",
+  "main": "dist/index.js",
+  "browser": "dist/index.min.js",
+  "module": "dist/index.js",
+  "unpkg": "dist/index.js",
+  "style": "dist/index.css",
+  "keywords": [
+    "v-ui-template",
+    "sfc",
+    "rollup"
+  ],
+  "files": [
+    "dist/*",
+    "src/*"
+  ],
   "scripts": {
     "serve": "yarn build && vue-cli-service serve dev/serve.js",
-    "build": "rollup --config ./build/rollup.config.js",
-    "lint": "eslint --fix --ext .js,.vue ./"
+    "build": "rm -rf ./dist && rollup --config ./build/rollup.config.js",
+    "lint": "eslint --fix --ext .js,.vue ./",
+    "gen": "bash ./scripts/gc.sh"
   },
-  "dependencies": {
+  "devDependencies": {
     "@commitlint/cli": "^12.1.4",
     "@commitlint/config-conventional": "^12.1.4",
     "@rollup/plugin-alias": "^3.1.2",
