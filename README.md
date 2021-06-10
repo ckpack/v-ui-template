@@ -46,8 +46,8 @@ we can import components we actually need, making the project smaller than other
 
 ```js
 import { createApp } from 'vue';
-import KButton from 'v-ui-template/libs/k-button';
-import 'v-ui-template/libs/k-button/index.css';
+import KButton from 'v-ui-template/libs/v-button';
+import 'v-ui-template/libs/v-button/index.css';
 
 import App from './App.vue';
 
@@ -71,8 +71,8 @@ import JavaScript and CSS file in your page.
 </head>
 <body>
   <div id="app">
-    <k-button @click="handlerClick">Test</k-button>
-    <k-label :label="count"></k-label>
+    <v-button @click="handlerClick">Test</v-button>
+    <v-label :label="count"></v-label>
   </div>
 </body>
 <script>

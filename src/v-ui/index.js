@@ -8,6 +8,8 @@ const install = (app) => {
   });
 };
 
-export default {
-  install,
+export {
+  install as default,
+  VButton,
+  VLabel,
 };

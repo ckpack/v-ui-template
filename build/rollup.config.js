@@ -70,7 +70,7 @@ export default [
     external,
   })),
   {
-    input: path.resolve(__dirname, '../src/k-ui'),
+    input: path.resolve(__dirname, '../src/v-ui'),
     output: {
       format: 'esm',
       file: 'dist/index.js',
@@ -85,7 +85,7 @@ export default [
     external,
   },
   {
-    input: path.resolve(__dirname, '../src/k-ui'),
+    input: path.resolve(__dirname, '../src/v-ui'),
     output: {
       format: 'iife',
       file: 'dist/index.global.js',
@@ -105,7 +105,7 @@ export default [
     external,
   },
   {
-    input: path.resolve(__dirname, '../src/k-ui'),
+    input: path.resolve(__dirname, '../src/v-ui'),
     output: {
       format: 'iife',
       file: 'dist/index.global.min.js',
