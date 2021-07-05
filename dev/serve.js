@@ -1,11 +1,14 @@
 import { createApp } from 'vue';
 
-import VUI from '../dist';
-import '../dist/index.css';
+import { components, create } from '../dist';
+// import '../dist/index.css';
 
 import Dev from './serve.vue';
 
 const app = createApp(Dev);
-app.use(VUI);
+
+app.use(create({
+  components,
+}));
 
 app.mount('#app');

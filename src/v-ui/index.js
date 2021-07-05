@@ -1,15 +1,14 @@
 import VButton from '@/components/v-button';
 import VLabel from '@/components/v-label';
+import create from '@/v-ui/create';
+// import preset from '@/v-ui/preset';
 
 const components = [VButton, VLabel];
-const install = (app) => {
-  components.forEach((component) => {
-    app.component(component.name, component);
-  });
-};
 
 export {
-  install as default,
+  // preset as default, todo tree-sharking
+  components,
+  create,
   VButton,
   VLabel,
 };

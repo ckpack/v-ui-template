@@ -1,4 +1,3 @@
-import fs from 'fs';
 import path from 'path';
 
 import resolve from '@rollup/plugin-node-resolve';
@@ -27,7 +26,7 @@ const plugins = {
   }),
   resolve: resolve(),
   vue: vue({
-    target: 'browser',
+    // target: 'browser',
     css: false,
     exposeFilename: false,
     preprocessStyles: true,
@@ -35,11 +34,6 @@ const plugins = {
       generateScopedName: '[local]___[hash:base64:5]',
     },
   }),
-  postcss: postcss({
-    // 提取css到单独的文件
-    extract: 'index.css',
-  }),
-  terser: terser(),
 };
 
 const external = ['vue'];
@@ -49,26 +43,7 @@ const globals = {
   vue: 'Vue',
 };
 
-const components = fs.readdirSync(path.resolve(__dirname, '../src/components')).filter((componentName) => /^v-.+/.test(componentName));
-
 export default [
-  ...components.map((componentName) => ({
-    input: path.resolve(__dirname, `../src/components/${componentName}`),
-    output: {
-      format: 'esm',
-      file: `libs/${componentName}/index.js`,
-    },
-    plugins: [
-      plugins.alias,
-      plugins.replace,
-      plugins.resolve,
-      plugins.vue,
-      postcss({
-        extract: path.resolve(`libs/${componentName}/index.css`),
-      }),
-    ],
-    external,
-  })),
   {
     input: path.resolve(__dirname, '../src/v-ui'),
     output: {
@@ -80,26 +55,9 @@ export default [
       plugins.replace,
       plugins.resolve,
       plugins.vue,
-      plugins.postcss,
-    ],
-    external,
-  },
-  {
-    input: path.resolve(__dirname, '../src/v-ui'),
-    output: {
-      format: 'iife',
-      file: 'dist/index.global.js',
-      name,
-      globals,
-    },
-    plugins: [
-      plugins.alias,
-      plugins.replace,
-      plugins.resolve,
-      plugins.vue,
       postcss({
-        minimize: false,
-        extract: 'index.global.css',
+        // 提取css到单独的文件
+        extract: 'index.css',
       }),
     ],
     external,
@@ -110,6 +68,7 @@ export default [
       format: 'iife',
       file: 'dist/index.global.min.js',
       name,
+      exports: 'named',
       globals,
     },
     plugins: [
@@ -121,7 +80,7 @@ export default [
         minimize: true,
         extract: 'index.global.min.css',
       }),
-      plugins.terser,
+      terser(),
     ],
     external,
   },
