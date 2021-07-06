@@ -2,8 +2,8 @@
 import * as components from './components';
 import create from './create';
 
-const preset = /*#__pure__*/ create({
-  components: Object.values(components),
+const preset = /*#__PURE__*/create({
+  components,
 });
 
 export default preset;

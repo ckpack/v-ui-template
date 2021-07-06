@@ -54,9 +54,5 @@ EOF
 cat <<EOF >"$DIRNAME/index.js"
 import ${NAME} from './${COMPONENT}.vue';
 
-${NAME}.install = (app) => {
-  app.component(${NAME}.name, ${NAME});
-};
-
 export default ${NAME};
 EOF

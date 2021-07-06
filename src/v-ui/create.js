@@ -1,7 +1,6 @@
-function create(options) {
-  const { components } = options;
+function create({ components }) {
   return (app) => {
-    components.forEach((component) => {
+    (Array.isArray(components) ? components : Object.values(components)).forEach((component) => {
       app.component(component.name, component);
     });
   };
