@@ -68,9 +68,9 @@ import JavaScript and CSS file in your page.
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>vue-color</title>
+  <title>VUI</title>
   <script src="https://unpkg.com/vue@3.1.4/dist/vue.global.prod.js"></script>
-  <link rel="stylesheet" href="https://unpkg.com/v-ui-template@0.2.1/dist/index.global.min.js">
+  <script src="https://unpkg.com/v-ui-template@0.2.1/dist/index.global.min.js"></script>
   <link rel="stylesheet" href="https://unpkg.com/v-ui-template@0.2.1/dist/index.global.min.css">
 </head>
 <body>
