@@ -18,8 +18,8 @@ export default {
 };
 </script>
 
-<style>
-/* @import '../../styles/var.scss'; */
+<style lang="css">
+@import '../../styles/var.scss';
 .v-label {
   background-color: red;
 }

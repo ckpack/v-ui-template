@@ -46,6 +46,8 @@ app.mount('#app');
 
 we can import components we actually need, making the project smaller than otherwise.
 
+##### for vite
+
 ```js
 import { createApp } from 'vue';
 import App from '@/App.vue';
@@ -60,6 +62,21 @@ app.use(create({
 app.mount('#app');
 ```
 
+##### for vue-cli
+
+```js
+import { createApp } from 'vue'
+import { create } from 'v-ui-template/src/v-ui/index';
+import { VLabel } from 'v-ui-template/src/v-ui/components';
+
+import App from './App.vue'
+
+const app = createApp(App)
+app.use(create({
+  components: [VLabel],
+}));
+app.mount('#app')
+```
 #### Use in page
 
 import JavaScript and CSS file in your page.

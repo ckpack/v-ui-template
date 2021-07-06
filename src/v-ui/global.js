@@ -1,4 +1,4 @@
-import preset from '@/v-ui/preset';
+import preset from './preset';
 
 export {
   preset as default,

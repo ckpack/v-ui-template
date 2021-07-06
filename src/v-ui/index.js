@@ -1,14 +1,12 @@
-import VButton from '@/components/v-button';
-import VLabel from '@/components/v-label';
-import create from '@/v-ui/create';
-// import preset from '@/v-ui/preset';
+// import preset from './preset';
+import create from './create';
+import * as components from './components';
 
-const components = [VButton, VLabel];
+export * from './components';
 
 export {
-  // preset as default, todo tree-sharking
-  components,
+  // todo tree-sharking
+  // preset as default,
   create,
-  VButton,
-  VLabel,
+  components,
 };
