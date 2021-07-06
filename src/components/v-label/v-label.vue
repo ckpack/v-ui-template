@@ -18,9 +18,9 @@ export default {
 };
 </script>
 
-<style lang="css">
+<style lang="scss">
 @import '../../styles/var.scss';
 .v-label {
-  background-color: red;
+  background-color: $red;
 }
 </style>

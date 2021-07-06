@@ -2,7 +2,7 @@
   "name": "v-ui-template",
   "sideEffects": false,
   "description": "Quickly create templates for vue sfc components",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "repository": "https://github.com/ckpack/v-ui-template",
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -19,9 +19,9 @@
     "libs/*"
   ],
   "scripts": {
-    "serve": "vue-cli-service serve dev/serve.js",
+    "dev": "yarn build && vue-cli-service serve dev/serve.js",
     "build": "rm -rf ./dist && rollup --config ./build/rollup.config.js",
-    "s:build": "vue-cli-service build --dest website dev/serve.js",
+    "s:build": "yarn build && vue-cli-service build --dest website dev/serve.js",
     "lint": "eslint --fix --ext .js,.vue ./",
     "gen": "bash ./scripts/gc.sh"
   },

@@ -1,15 +1,13 @@
 import { createApp } from 'vue';
 
-import { VButton, create } from '../src/v-ui';
-// import { VButton, create } from '../dist/index';
-// import '../dist/index.css';
+import { components, create } from '../dist/index';
 
 import Dev from './serve.vue';
 
 const app = createApp(Dev);
 
 app.use(create({
-  components: [VButton],
+  components,
 }));
 
 app.mount('#app');

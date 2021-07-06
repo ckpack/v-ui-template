@@ -26,10 +26,10 @@ const plugins = {
   }),
   resolve: resolve(),
   vue: vue({
-    // target: 'browser',
+    target: 'browser',
     css: false,
     exposeFilename: false,
-    preprocessStyles: true,
+    preprocessStyles: false,
     cssModulesOptions: {
       generateScopedName: '[local]___[hash:base64:5]',
     },
@@ -51,16 +51,30 @@ export default [
       file: 'dist/index.js',
     },
     plugins: [
-      plugins.alias,
       plugins.replace,
-      plugins.resolve,
+      plugins.alias,
       plugins.vue,
+      plugins.resolve,
       postcss({
         // 提取css到单独的文件
         extract: 'index.css',
       }),
     ],
     external,
+  },
+  {
+    input: path.resolve(__dirname, '../src/v-ui'),
+    output: {
+      format: 'esm',
+      file: 'dist/index.mixin.js',
+    },
+    plugins: [
+      plugins.replace,
+      plugins.alias,
+      plugins.vue,
+      plugins.resolve,
+      postcss({ include: /(?<!&module=.*)\.scss$/ }),
+    ],
   },
   {
     input: path.resolve(__dirname, '../src/v-ui/global.js'),
@@ -71,10 +85,10 @@ export default [
       globals,
     },
     plugins: [
-      plugins.alias,
       plugins.replace,
-      plugins.resolve,
+      plugins.alias,
       plugins.vue,
+      plugins.resolve,
       postcss({
         minimize: true,
         extract: 'index.global.min.css',
