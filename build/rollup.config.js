@@ -63,12 +63,11 @@ export default [
     external,
   },
   {
-    input: path.resolve(__dirname, '../src/v-ui'),
+    input: path.resolve(__dirname, '../src/v-ui/global.js'),
     output: {
       format: 'iife',
       file: 'dist/index.global.min.js',
       name,
-      exports: 'named',
       globals,
     },
     plugins: [

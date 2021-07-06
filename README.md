@@ -30,13 +30,15 @@ imports components entirely. Note that CSS file needs to be imported separately.
 
 ```js
 import { createApp } from 'vue';
-import VUI from 'v-ui-template';
+import App from '@/App.vue';
+import { components, create } from 'v-ui-template';
 import 'v-ui-template/dist/index.css';
 
-import App from './App.vue';
-
 const app = createApp(App);
-app.use(VUI);
+
+app.use(create({
+  components,
+}));
 app.mount('#app');
 ```
 
@@ -46,13 +48,15 @@ we can import components we actually need, making the project smaller than other
 
 ```js
 import { createApp } from 'vue';
-import KButton from 'v-ui-template/libs/v-button';
-import 'v-ui-template/libs/v-button/index.css';
-
-import App from './App.vue';
+import App from '@/App.vue';
+import { VButton, create } from 'v-ui-template';
+import 'v-ui-template/dist/index.css';
 
 const app = createApp(App);
-app.use(KButton);
+
+app.use(create({
+  components: [VButton],
+}));
 app.mount('#app');
 ```
 
@@ -65,9 +69,9 @@ import JavaScript and CSS file in your page.
 <html lang="en">
 <head>
   <title>vue-color</title>
-  <script src="https://unpkg.com/vue@next"></script>
-  <script src="https://unpkg.com/v-ui-template@0.0.8/dist/index.global.min.js"></script>
-  <link rel="stylesheet" href="https://unpkg.com/v-ui-template@0.0.8/dist/index.global.min.css">
+  <script src="https://unpkg.com/vue@3.1.4/dist/vue.global.prod.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/v-ui-template@0.2.1/dist/index.global.min.js">
+  <link rel="stylesheet" href="https://unpkg.com/v-ui-template@0.2.1/dist/index.global.min.css">
 </head>
 <body>
   <div id="app">
@@ -88,6 +92,7 @@ import JavaScript and CSS file in your page.
       },
     },
   });
+  console.log(JSON.stringify(VUI));
   app.use(VUI);
   app.mount('#app')
 </script>

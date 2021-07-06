@@ -1,7 +1,6 @@
 import { createApp } from 'vue';
 
-import { components, create } from '../dist';
-// import '../dist/index.css';
+import { components, create } from '../src/v-ui';
 
 import Dev from './serve.vue';
 
