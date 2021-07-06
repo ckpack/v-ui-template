@@ -66,7 +66,7 @@ app.mount('#app');
 
 ```js
 import { createApp } from 'vue'
-import { create } from 'v-ui-template/src/v-ui/index';
+import create from 'v-ui-template/src/v-ui/create';
 import { VLabel } from 'v-ui-template/src/v-ui/components';
 
 import App from './App.vue'
@@ -87,8 +87,8 @@ import JavaScript and CSS file in your page.
 <head>
   <title>VUI</title>
   <script src="https://unpkg.com/vue@3.1.4/dist/vue.global.prod.js"></script>
-  <script src="https://unpkg.com/v-ui-template@0.2.1/dist/index.global.min.js"></script>
-  <link rel="stylesheet" href="https://unpkg.com/v-ui-template@0.2.1/dist/index.global.min.css">
+  <script src="https://unpkg.com/v-ui-template@0.2.4/dist/index.global.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/v-ui-template@0.2.4/dist/index.global.min.css">
 </head>
 <body>
   <div id="app">
