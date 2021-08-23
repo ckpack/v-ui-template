@@ -6,6 +6,17 @@ import {
 
 const external = ['vue'];
 
+const basePlugins = [
+  plugins.replace,
+  plugins.alias,
+  plugins.vue,
+  plugins.resolve,
+];
+const postcssPlugin = postcss({
+  exclude: /node_modules/,
+  include: /(?<!&module=.*)\.scss$/,
+});
+
 export default [
   {
     input: `${projectRoot}/index.js`,
@@ -15,11 +26,38 @@ export default [
       globals: output.globals,
     },
     plugins: [
-      plugins.replace,
-      plugins.alias,
-      plugins.vue,
-      plugins.resolve,
+      ...basePlugins,
+      postcssPlugin,
+    ],
+    external,
+  },
+  {
+    input: `${projectRoot}/index.js`,
+    output: {
+      format: 'iife',
+      file: 'dist/index.min.js',
+      name: output.name,
+      globals: output.globals,
+      exports: 'named',
+    },
+    plugins: [
+      ...basePlugins,
+      postcssPlugin,
+      plugins.terser,
+    ],
+    external,
+  },
+  {
+    input: `${projectRoot}/index.js`,
+    output: {
+      format: 'esm',
+      file: 'dist/index.sep.js',
+      globals: output.globals,
+    },
+    plugins: [
+      ...basePlugins,
       postcss({
+        exclude: /node_modules/,
         extract: 'index.css',
       }),
     ],
@@ -28,38 +66,18 @@ export default [
   {
     input: `${projectRoot}/index.js`,
     output: {
-      format: 'esm',
-      file: 'dist/index.mixin.js',
-      globals: output.globals,
-    },
-    plugins: [
-      plugins.replace,
-      plugins.alias,
-      plugins.vue,
-      plugins.resolve,
-      postcss({
-        include: /(?<!&module=.*)\.scss$/,
-      }),
-    ],
-    external,
-  },
-  {
-    input: `${projectRoot}/index.js`,
-    output: {
       format: 'iife',
-      file: 'dist/index.global.min.js',
+      file: 'dist/index.sep.min.js',
       name: output.name,
       globals: output.globals,
       exports: 'named',
     },
     plugins: [
-      plugins.replace,
-      plugins.alias,
-      plugins.vue,
-      plugins.resolve,
+      ...basePlugins,
       postcss({
+        exclude: /node_modules/,
         minimize: true,
-        extract: 'index.global.min.css',
+        extract: 'index.min.css',
       }),
       plugins.terser,
     ],

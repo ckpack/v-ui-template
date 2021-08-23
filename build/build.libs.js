@@ -18,6 +18,16 @@ const components = fs.readdirSync(path.resolve(projectRoot, './components')).red
 
 const external = (id) => /^vue/.test(id) || /^@\/utils/.test(id) || /^@\/components/.test(id);
 
+const basePlugins = [
+  plugins.replace,
+  plugins.alias,
+  plugins.vue,
+  plugins.resolve,
+];
+const postcssPlugin = postcss({
+  exclude: /node_modules/,
+});
+
 export default [
   // 除了组件外的js文件
   {
@@ -30,11 +40,8 @@ export default [
       paths: output.paths,
     },
     plugins: [
-      plugins.replace,
-      plugins.alias,
-      plugins.vue,
-      plugins.resolve,
-      postcss({}),
+      ...basePlugins,
+      postcssPlugin,
     ],
     external,
   },
@@ -49,11 +56,8 @@ export default [
       paths: output.paths,
     },
     plugins: [
-      plugins.replace,
-      plugins.alias,
-      plugins.vue,
-      plugins.resolve,
-      postcss({}),
+      ...basePlugins,
+      postcssPlugin,
     ],
     external,
   },
