@@ -53,7 +53,7 @@ import { Button, create } from 'v-ui-template';
 const app = createApp(App);
 
 app.use(create({
-  components: [VButton],
+  components: [Button],
 }));
 app.mount('#app');
 ```
