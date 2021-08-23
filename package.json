@@ -20,8 +20,10 @@
   ],
   "scripts": {
     "dev": "yarn build && vue-cli-service serve dev/serve.js",
-    "build": "rm -rf ./libs && rm -rf ./dist && rollup --config ./build/rollup.config.js",
-    "s:build": "yarn build && vue-cli-service build --dest website dev/serve.js",
+    "build": "yarn build:libs && yarn build:dist",
+    "build:libs": "rm -rf ./libs && rollup --config ./build/build.libs.js",
+    "build:dist": "rm -rf ./dist && rollup --config ./build/build.dist.js",
+    "build:website": "vue-cli-service build --dest website dev/serve.js",
     "lint": "eslint --fix --ext .js,.vue ./",
     "gen": "bash ./scripts/gc.sh"
   },
