@@ -105,6 +105,7 @@ export default [
     output: {
       format: 'esm',
       file: 'dist/index.js',
+      globals,
     },
     plugins: [
       plugins.replace,
@@ -115,6 +116,7 @@ export default [
         extract: 'index.css',
       }),
     ],
+    external: ['vue'],
   },
   {
     input: `${projectRoot}/index.js`,
@@ -130,6 +132,7 @@ export default [
       plugins.resolve,
       postcss({ include: /(?<!&module=.*)\.scss$/ }),
     ],
+    external: ['vue'],
   },
   {
     input: `${projectRoot}/index.js`,
@@ -151,5 +154,6 @@ export default [
       }),
       terser(),
     ],
+    external: ['vue'],
   },
 ];
