@@ -30,7 +30,7 @@ mkdir -p "$DIRNAME"
 
 cat > $DIRNAME/$COMPONENT.vue <<EOF
 <template>
-  <div class="${COMPONENT}">
+  <div :class="\`\${prefix}-${COMPONENT}\`">
     {{name}}
   </div>
 </template>
@@ -43,11 +43,8 @@ export default ({
   },
 });
 </script>
-<style>
+<style lang="scss">
 @import '../../styles/var.scss';
-.${COMPONENT} {
-
-}
 </style>
 EOF
 
@@ -56,3 +53,5 @@ import ${NAME} from './${COMPONENT}.vue';
 
 export default ${NAME};
 EOF
+
+echo "alter src/components.js; add ->> import ${NAME} from '@/components/${COMPONENT}';";

@@ -31,14 +31,11 @@ imports components entirely. Note that CSS file needs to be imported separately.
 ```js
 import { createApp } from 'vue';
 import App from '@/App.vue';
-import { components, create } from 'v-ui-template';
-import 'v-ui-template/dist/index.css';
+import VUI from 'v-ui-template';
 
 const app = createApp(App);
 
-app.use(create({
-  components,
-}));
+app.use(VUI);
 app.mount('#app');
 ```
 
@@ -46,13 +43,12 @@ app.mount('#app');
 
 we can import components we actually need, making the project smaller than otherwise.
 
-##### for vite
+##### for vite or vue-cli
 
 ```js
 import { createApp } from 'vue';
 import App from '@/App.vue';
-import { VButton, create } from 'v-ui-template';
-import 'v-ui-template/dist/index.css';
+import { Button, create } from 'v-ui-template';
 
 const app = createApp(App);
 
@@ -60,22 +56,6 @@ app.use(create({
   components: [VButton],
 }));
 app.mount('#app');
-```
-
-##### for vue-cli
-
-```js
-import { createApp } from 'vue'
-import create from 'v-ui-template/src/v-ui/create';
-import { VLabel } from 'v-ui-template/src/v-ui/components';
-
-import App from './App.vue'
-
-const app = createApp(App)
-app.use(create({
-  components: [VLabel],
-}));
-app.mount('#app')
 ```
 #### Use in page
 
@@ -109,7 +89,6 @@ import JavaScript and CSS file in your page.
       },
     },
   });
-  console.log(JSON.stringify(VUI));
   app.use(VUI);
   app.mount('#app')
 </script>
