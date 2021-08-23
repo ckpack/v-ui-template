@@ -1,5 +1,4 @@
 import postcss from 'rollup-plugin-postcss';
-import { terser } from 'rollup-plugin-terser';
 
 import {
   projectRoot, plugins, output,
@@ -38,7 +37,9 @@ export default [
       plugins.alias,
       plugins.vue,
       plugins.resolve,
-      postcss({ include: /(?<!&module=.*)\.scss$/ }),
+      postcss({
+        include: /(?<!&module=.*)\.scss$/,
+      }),
     ],
     external,
   },
@@ -60,7 +61,7 @@ export default [
         minimize: true,
         extract: 'index.global.min.css',
       }),
-      terser(),
+      plugins.terser,
     ],
     external,
   },

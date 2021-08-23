@@ -1,8 +1,20 @@
+import fs from 'fs';
+import path from 'path';
+
+import glob from 'glob';
 import postcss from 'rollup-plugin-postcss';
 
-import {
-  projectRoot, inputJs, components, plugins, output,
-} from './build.config';
+import { projectRoot, plugins, output } from './build.config';
+
+const inputJs = glob.sync('src/**/*.js', {
+  nodir: true,
+}).filter((util) => !/^src\/components\//.test(util));
+
+const components = fs.readdirSync(path.resolve(projectRoot, './components')).reduce((pre, cur) => {
+  // eslint-disable-next-line no-param-reassign
+  pre[cur] = path.resolve(projectRoot, `./components/${cur}`);
+  return pre;
+}, {});
 
 const external = (id) => /^vue/.test(id) || /^@\/utils/.test(id) || /^@\/components/.test(id);
 

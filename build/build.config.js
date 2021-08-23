@@ -1,29 +1,18 @@
 import path from 'path';
-import fs from 'fs';
-
-import glob from 'glob';
 
 import resolve from '@rollup/plugin-node-resolve';
 import alias from '@rollup/plugin-alias';
 import replace from '@rollup/plugin-replace';
 import vue from 'rollup-plugin-vue';
+import { terser } from 'rollup-plugin-terser';
 
 const name = 'VUI';
+const projectRoot = path.resolve(__dirname, '../src');
+
 const globals = {
   // Provide global variable names to replace your external imports, eg. jquery: '$'
   vue: 'Vue',
 };
-const projectRoot = path.resolve(__dirname, '../src');
-
-const inputJs = glob.sync('src/**/*.js', {
-  nodir: true,
-}).filter((util) => !/^src\/components\//.test(util));
-
-const components = fs.readdirSync(path.resolve(projectRoot, './components')).reduce((pre, cur) => {
-  // eslint-disable-next-line no-param-reassign
-  pre[cur] = path.resolve(projectRoot, `./components/${cur}`);
-  return pre;
-}, {});
 
 const paths = (id) => {
   if (/^@\/utils/.test(id)) {
@@ -49,6 +38,7 @@ const plugins = {
     preventAssignment: true,
   }),
   resolve: resolve(),
+  terser,
   vue: vue({
     include: /\.vue$/,
     target: 'browser',
@@ -69,8 +59,6 @@ const output = {
 
 export {
   projectRoot,
-  inputJs,
-  components,
   plugins,
   output,
 };
