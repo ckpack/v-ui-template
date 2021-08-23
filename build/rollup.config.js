@@ -53,6 +53,7 @@ const plugins = {
   }),
   resolve: resolve(),
   vue: vue({
+    include: /\.vue$/,
     target: 'browser',
     css: false,
     exposeFilename: false,
@@ -77,7 +78,9 @@ export default [
     plugins: [
       plugins.replace,
       plugins.alias,
+      plugins.vue,
       plugins.resolve,
+      postcss({}),
     ],
     external,
   },
