@@ -1,18 +1,28 @@
 <template>
-  <div class="v-label">
+  <div :class="`${prefix}-label`">
     {{label}}
   </div>
 </template>
 
 <script>
+import { add, mul } from '@/utils';
+
+console.log(add);
+console.log(mul);
+
 export default {
-  name: 'v-label',
+  name: 'Label',
   props: {
     label: [String, Number],
   },
   setup(props) {
     return {
       text: props.label,
+    };
+  },
+  data() {
+    return {
+      prefix: this.$VUI.prefix,
     };
   },
 };

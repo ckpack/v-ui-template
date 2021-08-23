@@ -1,9 +1,9 @@
-// import preset from './preset';
+import preset from './preset';
 import create from './create';
 
 export * from './components';
 export {
   // todo tree-sharking
-  // preset as default,
+  preset as default,
   create,
 };
