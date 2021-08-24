@@ -1,7 +1,9 @@
-const size = 'medium';
+const name = 'VUI';
 const prefix = 'v';
+const size = 'medium';
 
 export {
-  size,
+  name,
   prefix,
+  size,
 };

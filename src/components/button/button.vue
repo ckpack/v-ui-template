@@ -19,10 +19,6 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-@import '../../styles/var.scss';
-
-.v-button {
-  background-color: $red;
-}
+<style lang="scss">
+@import './button.scss';
 </style>

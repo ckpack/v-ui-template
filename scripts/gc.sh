@@ -37,21 +37,28 @@ cat > $DIRNAME/$COMPONENT.vue <<EOF
 <script>
 export default ({
   name: '${COMPONENT}',
-  props: { },
-  setup() {
-    // init here
+  data() {
+    return {
+      prefix: this.\$VUI.prefix,
+    };
   },
 });
 </script>
 <style lang="scss">
-@import '../../styles/var.scss';
+@import './${COMPONENT}.scss';
 </style>
 EOF
 
-cat <<EOF >"$DIRNAME/index.js"
+cat >"$DIRNAME/index.js" <<EOF
 import ${NAME} from './${COMPONENT}.vue';
 
 export default ${NAME};
+EOF
+
+cat > $DIRNAME/$COMPONENT.scss <<EOF
+@import '../../styles/var.scss';
+
+.${COMPONENT}{}
 EOF
 
 echo "alter src/components.js; add ->> import ${NAME} from '@/components/${COMPONENT}';";

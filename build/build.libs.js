@@ -1,20 +1,20 @@
-import fs from 'fs';
-import path from 'path';
+// import fs from 'fs';
+// import path from 'path';
 
 import glob from 'glob';
-import postcss from 'rollup-plugin-postcss';
 
 import { projectRoot, plugins, output } from './build.config';
 
 const inputJs = glob.sync('src/**/*.js', {
   nodir: true,
-}).filter((util) => !/^src\/components\//.test(util));
+});
+// .filter((util) => !/^src\/components\//.test(util));
 
-const components = fs.readdirSync(path.resolve(projectRoot, './components')).reduce((pre, cur) => {
-  // eslint-disable-next-line no-param-reassign
-  pre[cur] = path.resolve(projectRoot, `./components/${cur}`);
-  return pre;
-}, {});
+// const components = fs.readdirSync(path.resolve(projectRoot, './components')).reduce((pre, cur) => {
+//   // eslint-disable-next-line no-param-reassign
+//   pre[cur] = path.resolve(projectRoot, `./components/${cur}`);
+//   return pre;
+// }, {});
 
 const external = (id) => /^vue/.test(id) || /^@\/utils/.test(id) || /^@\/components/.test(id);
 
@@ -24,9 +24,6 @@ const basePlugins = [
   plugins.vue,
   plugins.resolve,
 ];
-const postcssPlugin = postcss({
-  exclude: /node_modules/,
-});
 
 export default [
   // 除了组件外的js文件
@@ -41,24 +38,24 @@ export default [
     },
     plugins: [
       ...basePlugins,
-      postcssPlugin,
+      plugins.postcss(),
     ],
     external,
   },
-  // 组件
-  {
-    input: components,
-    output: {
-      format: 'esm',
-      dir: 'libs/',
-      entryFileNames: '[name]/index.js',
-      globals: output.globals,
-      paths: output.paths,
-    },
-    plugins: [
-      ...basePlugins,
-      postcssPlugin,
-    ],
-    external,
-  },
+  // // 组件
+  // {
+  //   input: components,
+  //   output: {
+  //     format: 'esm',
+  //     dir: 'libs/',
+  //     entryFileNames: '[name]/index.js',
+  //     globals: output.globals,
+  //     paths: output.paths,
+  //   },
+  //   plugins: [
+  //     ...basePlugins,
+  //     plugins.postcss(),
+  //   ],
+  //   external,
+  // },
 ];

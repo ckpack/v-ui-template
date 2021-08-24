@@ -1,5 +1,3 @@
-import postcss from 'rollup-plugin-postcss';
-
 import {
   projectRoot, plugins, output,
 } from './build.config';
@@ -12,10 +10,6 @@ const basePlugins = [
   plugins.vue,
   plugins.resolve,
 ];
-const postcssPlugin = postcss({
-  exclude: /node_modules/,
-  include: /(?<!&module=.*)\.scss$/,
-});
 
 export default [
   {
@@ -27,7 +21,7 @@ export default [
     },
     plugins: [
       ...basePlugins,
-      postcssPlugin,
+      plugins.postcss(),
     ],
     external,
   },
@@ -42,7 +36,7 @@ export default [
     },
     plugins: [
       ...basePlugins,
-      postcssPlugin,
+      plugins.postcss(),
       plugins.terser,
     ],
     external,
@@ -56,8 +50,8 @@ export default [
     },
     plugins: [
       ...basePlugins,
-      postcss({
-        exclude: /node_modules/,
+      plugins.postcss({
+        minimize: false,
         extract: 'index.css',
       }),
     ],
@@ -74,9 +68,7 @@ export default [
     },
     plugins: [
       ...basePlugins,
-      postcss({
-        exclude: /node_modules/,
-        minimize: true,
+      plugins.postcss({
         extract: 'index.min.css',
       }),
       plugins.terser,
