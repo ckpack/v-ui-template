@@ -5,6 +5,7 @@
 # Scripts
 
 #### Install dependencies 
+
 ```
 yarn
 ```
@@ -57,6 +58,7 @@ app.use(create({
 }));
 app.mount('#app');
 ```
+
 #### Use in page
 
 import JavaScript and CSS file in your page.
@@ -66,9 +68,8 @@ import JavaScript and CSS file in your page.
 <html lang="en">
 <head>
   <title>VUI</title>
-  <script src="https://unpkg.com/vue@3.1.4/dist/vue.global.prod.js"></script>
-  <script src="https://unpkg.com/v-ui-template@0.2.4/dist/index.global.min.js"></script>
-  <link rel="stylesheet" href="https://unpkg.com/v-ui-template@0.2.4/dist/index.global.min.css">
+  <script src="https://unpkg.com/vue@3.2.4/dist/vue.global.prod.js"></script>
+  <script src="https://unpkg.com/v-ui-template@1.0.1/dist/index.global.min.js"></script>
 </head>
 <body>
   <div id="app">
