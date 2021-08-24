@@ -38,7 +38,7 @@ const plugins = {
     preventAssignment: true,
   }),
   resolve: resolve(),
-  terser,
+  terser: terser(),
   vue: vue({
     include: /\.vue$/,
     target: 'browser',

@@ -69,7 +69,7 @@ import JavaScript and CSS file in your page.
 <head>
   <title>VUI</title>
   <script src="https://unpkg.com/vue@3.2.4/dist/vue.global.prod.js"></script>
-  <script src="https://unpkg.com/v-ui-template@1.0.1/dist/index.global.min.js"></script>
+  <script src="https://unpkg.com/v-ui-template@1.0.2/dist/index.min.js"></script>
 </head>
 <body>
   <div id="app">
