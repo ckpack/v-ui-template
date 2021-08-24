@@ -2,6 +2,7 @@ import {
   projectRoot, plugins, output,
 } from './build.config';
 
+const input = `${projectRoot}/index.js`;
 const external = ['vue'];
 
 const basePlugins = [
@@ -13,7 +14,7 @@ const basePlugins = [
 
 export default [
   {
-    input: `${projectRoot}/index.js`,
+    input,
     output: {
       format: 'esm',
       file: 'dist/index.js',
@@ -26,13 +27,13 @@ export default [
     external,
   },
   {
-    input: `${projectRoot}/index.js`,
+    input,
     output: {
       format: 'iife',
       file: 'dist/index.min.js',
+      exports: 'named',
       name: output.name,
       globals: output.globals,
-      exports: 'named',
     },
     plugins: [
       ...basePlugins,
@@ -42,7 +43,7 @@ export default [
     external,
   },
   {
-    input: `${projectRoot}/index.js`,
+    input,
     output: {
       format: 'esm',
       file: 'dist/index.sep.js',
@@ -58,13 +59,13 @@ export default [
     external,
   },
   {
-    input: `${projectRoot}/index.js`,
+    input,
     output: {
       format: 'iife',
       file: 'dist/index.sep.min.js',
+      exports: 'named',
       name: output.name,
       globals: output.globals,
-      exports: 'named',
     },
     plugins: [
       ...basePlugins,
