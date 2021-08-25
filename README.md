@@ -44,8 +44,6 @@ app.mount('#app');
 
 we can import components we actually need, making the project smaller than otherwise.
 
-##### for vite or vue-cli
-
 ```js
 import { createApp } from 'vue';
 import App from '@/App.vue';
