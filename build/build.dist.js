@@ -1,15 +1,14 @@
 import {
-  projectRoot, plugins, output,
+  projectRoot, plugins, output, external,
 } from './build.config';
 
 const input = `${projectRoot}/index.js`;
-const external = ['vue'];
 
 const basePlugins = [
-  plugins.replace,
   plugins.alias,
   plugins.vue,
   plugins.resolve,
+  plugins.replace,
 ];
 
 export default [

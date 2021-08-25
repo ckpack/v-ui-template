@@ -1,14 +1,11 @@
 <template>
-  <div :class="`${prefix}-label`">
+  <div :class="`${cssPrefix}label`">
     {{label}}
   </div>
 </template>
 
 <script>
-import { add, mul } from '@/utils';
-
-console.log(add);
-console.log(mul);
+import { cssPrefix } from '../../defaultConfig';
 
 export default {
   name: 'Label',
@@ -17,12 +14,8 @@ export default {
   },
   setup(props) {
     return {
+      cssPrefix,
       text: props.label,
-    };
-  },
-  data() {
-    return {
-      prefix: this.$VUI.prefix,
     };
   },
 };

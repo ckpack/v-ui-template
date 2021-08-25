@@ -1,8 +1,7 @@
-/* eslint-disable spaced-comment */
-import create from './create';
-import { components } from './components';
+import create from '@/create';
+import { components } from '@/components';
 
-const preset = /*#__PURE__*/ create({
+const preset = create({
   components,
 });
 

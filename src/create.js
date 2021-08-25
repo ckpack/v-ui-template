@@ -1,4 +1,4 @@
-import { prefix, size } from './defaultConfig';
+import { prefix, size } from '@/defaultConfig';
 
 function create({
   components,

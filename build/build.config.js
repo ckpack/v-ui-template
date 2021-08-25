@@ -8,22 +8,12 @@ import { terser } from 'rollup-plugin-terser';
 import postcss from 'rollup-plugin-postcss';
 import prefixer from 'postcss-prefixer';
 
-import { name, prefix } from '../src/defaultConfig';
+import { name, cssPrefix } from '../src/defaultConfig';
 
 const projectRoot = path.resolve(__dirname, '../src');
 const globals = {
   // Provide global variable names to replace your external imports, eg. jquery: '$'
   vue: 'Vue',
-};
-
-const paths = (id) => {
-  if (/^@\/utils/.test(id)) {
-    return id.replace('@/utils', '../../utils');
-  }
-  if (/^@\/components/.test(id)) {
-    return id.replace('@/components', './components');
-  }
-  return id;
 };
 
 const postcssPlugin = (options = {}) => {
@@ -33,7 +23,7 @@ const postcssPlugin = (options = {}) => {
   return postcss({
     minimize,
     plugins: [prefixer({
-      prefix: `${prefix}-`,
+      prefix: cssPrefix,
     })],
     exclude,
     include,
@@ -72,11 +62,13 @@ const plugins = {
 const output = {
   name,
   globals,
-  paths,
 };
+
+const external = ['vue'];
 
 export {
   projectRoot,
   plugins,
   output,
+  external,
 };

@@ -1,16 +1,17 @@
 import glob from 'glob';
-import { projectRoot, plugins, output } from './build.config';
+import {
+  projectRoot, plugins, output, external,
+} from './build.config';
 
 const input = glob.sync('src/**/*.js', {
   nodir: true,
 });
-const external = (id) => /^vue/.test(id) || /^@\/utils/.test(id) || /^@\/components/.test(id);
 
 const basePlugins = [
-  plugins.replace,
   plugins.alias,
   plugins.vue,
   plugins.resolve,
+  plugins.replace,
 ];
 
 export default [
@@ -21,7 +22,6 @@ export default [
       dir: 'libs/',
       entryFileNames: ({ facadeModuleId }) => facadeModuleId.replace(`${projectRoot}/`, ''),
       globals: output.globals,
-      paths: output.paths,
     },
     plugins: [
       ...basePlugins,

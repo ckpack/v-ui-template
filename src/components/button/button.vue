@@ -1,19 +1,17 @@
 <template>
-  <button :class="`${prefix}-button`">
+  <button :class="`${cssPrefix}button`">
     <slot></slot>
   </button>
 </template>
 
 <script>
-import { add } from '@/utils';
-
-console.log(add);
+import { cssPrefix } from '@/defaultConfig';
 
 export default {
   name: 'Button',
-  data() {
+  setup() {
     return {
-      prefix: this.$VUI.prefix,
+      cssPrefix,
     };
   },
 };
