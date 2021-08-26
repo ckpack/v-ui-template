@@ -45,6 +45,13 @@ fs.writeFileSync(`${basePath}/src/components/${componentName}/${componentName}.s
 
 .${componentName} {}`);
 fs.writeFileSync(`${basePath}/src/components/${componentName}/index.js`, `import ${formatComponentName} from './${componentName}.vue';
+import { prefix } from '@/defaultConfig';
+
+${formatComponentName}.install = (app, {
+  componentPrefix = prefix,
+} = {}) => {
+  app.component(\`\${componentPrefix.toUpperCase()}${formatComponentName}\`, ${formatComponentName});
+};
 
 export default ${formatComponentName};
 `);

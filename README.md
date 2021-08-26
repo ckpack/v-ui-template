@@ -42,21 +42,56 @@ app.mount('#app');
 
 #### On demand
 
-we can import components we actually need, making the project smaller than otherwise.
+We can import components we actually need, making the project smaller than otherwise.
+
+##### Import Directly
+
+```html
+<script>
+  import { Button, Label } from 'v-ui-template';
+  export default {
+    components: {
+      VButton: Button,
+    },
+  }
+</script>
+
+<template>
+  <v-button @click="handlerClick">Test</v-button>
+</template>
+```
+
+##### Install on Demand Globally 
 
 ```js
 import { createApp } from 'vue';
 import App from '@/App.vue';
-import { Button, create } from 'v-ui-template';
+import { Button, Label } from 'v-ui-template';
 
 const app = createApp(App);
-
-app.use(create({
-  components: [Button],
-}));
+app.use(Button);
+app.use(Label);
 app.mount('#app');
 ```
 
+Or use the more convenient create like this
+
+```js
+import { createApp } from 'vue';
+import App from '@/App.vue';
+import { Button, Label, create } from 'v-ui-template';
+
+const app = createApp(App);
+
+app.use(create([Button, Label]));
+app.mount('#app');
+```
+
+Then we can use the component
+
+```html
+  <v-button @click="handlerClick">Test</v-button>
+```
 #### Use in page
 
 import JavaScript and CSS file in your page.
@@ -92,4 +127,25 @@ import JavaScript and CSS file in your page.
   app.mount('#app')
 </script>
 </html>
+```
+
+#### Options params
+
+We can change the component prefix by options params
+
+```js
+app.use(Button, {
+  componentPrefix: 'k',
+});
+
+// or
+app.use(create([Button, Label]), {
+  componentPrefix: 'k',
+});
+```
+
+Then we can use the new component prefix
+
+```html
+  <k-button @click="handlerClick">Test</k-button>
 ```
