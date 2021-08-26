@@ -8,7 +8,7 @@ const basePlugins = [
   plugins.alias,
   plugins.vue,
   plugins.resolve,
-  plugins.replace,
+  plugins.commonjs,
 ];
 
 export default [

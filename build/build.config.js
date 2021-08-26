@@ -2,7 +2,7 @@ import path from 'path';
 
 import resolve from '@rollup/plugin-node-resolve';
 import alias from '@rollup/plugin-alias';
-import replace from '@rollup/plugin-replace';
+import commonjs from '@rollup/plugin-commonjs';
 import vue from 'rollup-plugin-vue';
 import { terser } from 'rollup-plugin-terser';
 import postcss from 'rollup-plugin-postcss';
@@ -40,10 +40,6 @@ const plugins = {
       },
     ],
   }),
-  replace: replace({
-    'process.env.NODE_ENV': '\'production\'',
-    preventAssignment: true,
-  }),
   resolve: resolve(),
   terser: terser(),
   vue: vue({
@@ -57,6 +53,7 @@ const plugins = {
     },
   }),
   postcss: postcssPlugin,
+  commonjs: commonjs(),
 };
 
 const output = {
