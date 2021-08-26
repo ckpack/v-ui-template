@@ -27,7 +27,7 @@ yarn build
 
 #### Fully import
 
-imports components entirely. Note that CSS file needs to be imported separately.
+imports components entirely.
 
 ```js
 import { createApp } from 'vue';
