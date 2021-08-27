@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.5](https://github.com/ckpack/v-ui-template/compare/v1.1.4...v1.1.5) (2021-08-27)
+
+
+### Bug Fixes
+
+* update npm-publish.yml ([7cab704](https://github.com/ckpack/v-ui-template/commit/7cab704093c78887db0e3f3162ccb9487ccb86c9))
+
 ### [1.1.4](https://github.com/ckpack/v-ui-template/compare/v1.1.3...v1.1.4) (2021-08-27)
 
 
