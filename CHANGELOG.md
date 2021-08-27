@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.4](https://github.com/ckpack/v-ui-template/compare/v1.1.3...v1.1.4) (2021-08-27)
+
+
+### Bug Fixes
+
+* github action error ([39215ee](https://github.com/ckpack/v-ui-template/commit/39215ee85910e165b02dd749785252b13fea8a38))
+
 ### [1.1.3](https://github.com/ckpack/v-ui-template/compare/v1.1.1...v1.1.3) (2021-08-27)
 
 ### [1.1.2](https://github.com/ckpack/v-ui-template/compare/v1.1.1...v1.1.2) (2021-08-27)
