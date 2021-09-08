@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.7](https://github.com/ckpack/v-ui-template/compare/v1.1.6...v1.1.7) (2021-09-08)
+
+
+### Bug Fixes
+
+* rename libs to es ([248822f](https://github.com/ckpack/v-ui-template/commit/248822f07a3e0a692a0761b591a490aed6c67736))
+
 ### [1.1.6](https://github.com/ckpack/v-ui-template/compare/v1.1.5...v1.1.6) (2021-09-01)
 
 ### [1.1.5](https://github.com/ckpack/v-ui-template/compare/v1.1.4...v1.1.5) (2021-08-27)
