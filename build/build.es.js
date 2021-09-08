@@ -19,7 +19,7 @@ export default [
     input,
     output: {
       format: 'esm',
-      dir: 'libs/',
+      dir: 'es/',
       entryFileNames: ({ facadeModuleId }) => facadeModuleId.replace(`${projectRoot}/`, ''),
       globals: output.globals,
     },

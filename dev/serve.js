@@ -1,6 +1,6 @@
 import { createApp } from 'vue';
 
-import VUI from '../libs';
+import VUI from '../es';
 
 import Dev from './serve.vue';
 
