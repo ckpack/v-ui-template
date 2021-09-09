@@ -2,7 +2,7 @@
   "name": "v-ui-template",
   "sideEffects": false,
   "description": "Quickly create templates for vue sfc components",
-  "version": "1.1.7",
+  "version": "1.2.0",
   "repository": "https://github.com/ckpack/v-ui-template",
   "main": "dist/index.js",
   "module": "es/index.js",
@@ -28,7 +28,7 @@
     "lint": "eslint --fix --ext .js,.vue ./",
     "gen": "node ./scripts/gen.js",
     "gen:compoents": "node ./scripts/gen-compoents.js",
-    "release": "standard-version && git push origin --tags",
+    "release": "standard-version && git push &&  git push origin --tags",
     "prepare": "husky install"
   },
   "devDependencies": {

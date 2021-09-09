@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/ckpack/v-ui-template/compare/v1.1.7...v1.2.0) (2021-09-09)
+
+
+### Features
+
+* pre-commit add lint-staged ([9b5594e](https://github.com/ckpack/v-ui-template/commit/9b5594ed51c9573433b6c6e11b0055556c9edcc3))
+
+
+### Bug Fixes
+
+* update eslint ([092cc27](https://github.com/ckpack/v-ui-template/commit/092cc27f869953794071d874d74a1359eaa6e5f5))
+* update eslint ([6afbc2a](https://github.com/ckpack/v-ui-template/commit/6afbc2ad78407c3947d716b09d77dad38bc36d18))
+
 ### [1.1.7](https://github.com/ckpack/v-ui-template/compare/v1.1.6...v1.1.7) (2021-09-08)
 
 
