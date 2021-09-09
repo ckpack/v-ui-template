@@ -8,5 +8,5 @@ export {
   name,
   prefix,
   size,
-  cssPrefix,
+  cssPrefix
 };
