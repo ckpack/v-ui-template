@@ -1,7 +1,8 @@
-function create(components, options) {
-  return (app) => {
-    (Array.isArray(components) ? components : Object.values(components)).forEach((component) => {
-      app.use(component, options);
+function create(plugins) {
+  return (app, options) => {
+    (Array.isArray(plugins) ? plugins : Object.values(plugins)).forEach((plugin) => {
+      console.log(options);
+      app.use(plugin, options);
     });
   };
 }

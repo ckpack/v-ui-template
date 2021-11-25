@@ -6,6 +6,8 @@ import '../dist/index.css';
 
 const app = createApp(Dev);
 
-app.use(VUI);
+app.use(VUI, {
+  componentPrefix: 'v',
+});
 
 app.mount('#app');
