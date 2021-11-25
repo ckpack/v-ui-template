@@ -8,7 +8,8 @@ import { terser } from 'rollup-plugin-terser';
 import postcss from 'rollup-plugin-postcss';
 import prefixer from 'postcss-prefixer';
 
-import { name, cssPrefix } from '../src/defaultConfig';
+import { NAME, CSS_PREFIX } from '../src/defaultConfig';
+import { dependencies } from '../package.json';
 
 const projectRoot = path.resolve(__dirname, '../src');
 const globals = {
@@ -23,7 +24,7 @@ const postcssPlugin = (options = {}) => {
   return postcss({
     minimize,
     plugins: [prefixer({
-      prefix: cssPrefix,
+      prefix: CSS_PREFIX,
     })],
     exclude,
     include,
@@ -43,13 +44,13 @@ const plugins = {
   resolve: resolve(),
   terser: terser(),
   vue: vue({
-    include: /\.vue$/,
+    include: [/\.vue$/i],
     target: 'browser',
     css: false,
     exposeFilename: false,
     preprocessStyles: false,
     cssModulesOptions: {
-      generateScopedName: '[local]___[hash:base64:5]',
+      generateScopedName: '[name]__[local]___[hash:base64:5]',
     },
   }),
   postcss: postcssPlugin,
@@ -57,11 +58,14 @@ const plugins = {
 };
 
 const output = {
-  name,
+  name: NAME,
   globals,
 };
 
-const external = ['vue'];
+const external = {
+  vue: ['vue'],
+  dependencies: Object.keys(dependencies),
+};
 
 export {
   projectRoot,

@@ -1,12 +1,7 @@
-const name = 'VUI';
+export const NAME = 'VUI';
 // 自定义组件前缀
-const prefix = 'v';
-const cssPrefix = `${prefix}-`;
-const size = 'medium';
+export const COMPONENT_PREFIX = 'V';
+export const CSS_PREFIX = `${COMPONENT_PREFIX.toLowerCase()}-`;
+export const SIZE = 'medium';
 
-export {
-  name,
-  prefix,
-  size,
-  cssPrefix,
-};
+export const getComponentPrefix = (options = {}) => options.componentPrefix || COMPONENT_PREFIX;

@@ -23,7 +23,7 @@ export default [
       ...basePlugins,
       plugins.postcss(),
     ],
-    external,
+    external: external.vue,
   },
   {
     input,
@@ -39,7 +39,7 @@ export default [
       plugins.postcss(),
       plugins.terser,
     ],
-    external,
+    external: external.vue,
   },
   {
     input,
@@ -55,7 +55,7 @@ export default [
         extract: 'index.css',
       }),
     ],
-    external,
+    external: external.vue,
   },
   {
     input,
@@ -73,6 +73,6 @@ export default [
       }),
       plugins.terser,
     ],
-    external,
+    external: external.vue,
   },
 ];

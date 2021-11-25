@@ -1,7 +1,6 @@
 import { createApp } from 'vue';
 
-import VUI from '../es';
-
+import VUI from '../src';
 import Dev from './serve.vue';
 
 const app = createApp(Dev);

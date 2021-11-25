@@ -10,8 +10,7 @@ function getCompoentsJS() {
   const components = fs.readdirSync(`${basePath}/src/components`);
   let componentsJS = '/* Do not modify the automatically generated code */\n';
   componentsJS += components.map((name) => `import ${formatComponent(name)} from '@/components/${name}';\n`).join('');
-  componentsJS += `\nconst components = [\n${components.map((name) => `  ${formatComponent(name)},\n`).join('')}];\n`;
-  componentsJS += `\nexport {\n  components,\n${components.map((name) => `  ${formatComponent(name)},\n`).join('')}};\n`;
+  componentsJS += `\nexport {\n${components.map((name) => `  ${formatComponent(name)},\n`).join('')}};\n`;
   return componentsJS;
 }
 

@@ -1,22 +1,11 @@
 <template>
-  <button :class="`${cssPrefix}button`">
+  <button :class="`${CSS_PREFIX}button`">
     <slot></slot>
   </button>
 </template>
 
-<script>
-import { cssPrefix } from '@/defaultConfig';
-
-export default {
-  name: 'Button',
-  setup() {
-    return {
-      cssPrefix,
-    };
-  },
-};
+<script setup>
+import { CSS_PREFIX } from '@/defaultConfig';
 </script>
 
-<style lang="scss">
-@import './button.scss';
-</style>
+<style src="./button.scss" lang="scss"></style>

@@ -1,10 +1,6 @@
 import Button from './button.vue';
-import { prefix } from '@/defaultConfig';
+import { install } from '@/utils/compoent';
 
-Button.install = (app, {
-  componentPrefix = prefix,
-} = {}) => {
-  app.component(`${componentPrefix.toUpperCase()}${Button.name}`, Button);
-};
+Button.install = install;
 
 export default Button;

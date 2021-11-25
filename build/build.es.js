@@ -7,13 +7,6 @@ const input = glob.sync('src/**/*.js', {
   nodir: true,
 });
 
-const basePlugins = [
-  plugins.alias,
-  plugins.vue,
-  plugins.resolve,
-  plugins.commonjs,
-];
-
 export default [
   {
     input,
@@ -24,9 +17,11 @@ export default [
       globals: output.globals,
     },
     plugins: [
-      ...basePlugins,
+      plugins.alias,
+      plugins.vue,
       plugins.postcss(),
+      plugins.resolve,
     ],
-    external,
+    external: [...external.vue, ...external.dependencies],
   },
 ];

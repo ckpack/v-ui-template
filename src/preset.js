@@ -1,6 +1,4 @@
 import create from '@/create';
-import { components } from '@/components';
+import * as components from '@/components';
 
-const preset = create(components);
-
-export default preset;
+export default create(components);

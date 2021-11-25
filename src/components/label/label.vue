@@ -1,11 +1,11 @@
 <template>
-  <div :class="`${cssPrefix}label`">
+  <div :class="`${CSS_PREFIX}-label`">
     {{label}}
   </div>
 </template>
 
 <script>
-import { cssPrefix } from '../../defaultConfig';
+import { CSS_PREFIX } from '../../defaultConfig';
 
 export default {
   name: 'Label',
@@ -14,13 +14,11 @@ export default {
   },
   setup(props) {
     return {
-      cssPrefix,
+      CSS_PREFIX,
       text: props.label,
     };
   },
 };
 </script>
 
-<style lang="scss">
-@import './label.scss';
-</style>
+<style src="./label.scss" lang="scss"></style>

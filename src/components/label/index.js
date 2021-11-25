@@ -1,10 +1,6 @@
 import Label from './label.vue';
-import { prefix } from '@/defaultConfig';
+import { install } from '@/utils/compoent';
 
-Label.install = (app, {
-  componentPrefix = prefix,
-} = {}) => {
-  app.component(`${componentPrefix.toUpperCase()}${Label.name}`, Label);
-};
+Label.install = install;
 
 export default Label;
