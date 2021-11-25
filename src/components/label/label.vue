@@ -1,5 +1,5 @@
 <template>
-  <div :class="`${CSS_PREFIX}-label`">
+  <div :class="`${CSS_PREFIX}label`">
     {{label}}
   </div>
 </template>

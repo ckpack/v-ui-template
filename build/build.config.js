@@ -64,7 +64,7 @@ const output = {
 
 const external = {
   vue: ['vue'],
-  dependencies: Object.keys(dependencies),
+  dependencies: dependencies ? Object.keys(dependencies) : [],
 };
 
 export {

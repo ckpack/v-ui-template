@@ -4,8 +4,17 @@
   </button>
 </template>
 
-<script setup>
+<script>
 import { CSS_PREFIX } from '@/defaultConfig';
+
+export default {
+  name: 'Button',
+  setup() {
+    return {
+      CSS_PREFIX,
+    };
+  },
+};
 </script>
 
 <style src="./button.scss" lang="scss"></style>
