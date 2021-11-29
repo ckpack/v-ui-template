@@ -1,6 +1,4 @@
 import Label from './label.vue';
-import { install } from '@/utils/compoent';
+import { withInstallComponent } from '@/utils/compoent';
 
-Label.install = install;
-
-export default Label;
+export default withInstallComponent(Label);

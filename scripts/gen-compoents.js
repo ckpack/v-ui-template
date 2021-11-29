@@ -8,10 +8,9 @@ function formatComponent(component) {
 
 function getCompoentsJS() {
   const components = fs.readdirSync(`${basePath}/src/components`);
-  let componentsJS = '/* Do not modify the automatically generated code */\n';
-  componentsJS += components.map((name) => `import ${formatComponent(name)} from '@/components/${name}';\n`).join('');
-  componentsJS += `\nexport {\n${components.map((name) => `  ${formatComponent(name)},\n`).join('')}};\n`;
-  return componentsJS;
+  return `/* Do not modify the automatically generated code */
+${components.map((name) => `import ${formatComponent(name)} from '@/components/${name}';`).join('\n')}
+\nexport {\n${components.map((name) => `  ${formatComponent(name)},\n`).join('')}};\n`;
 }
 
 fs.writeFileSync(`${basePath}/src/components.js`, getCompoentsJS());

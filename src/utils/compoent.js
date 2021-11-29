@@ -1,7 +1,11 @@
 import { getComponentPrefix } from '@/defaultConfig';
 
-// eslint-disable-next-line func-names
-export const install = function (app, options) {
-  const componentPrefix = getComponentPrefix(options);
-  app.component(`${componentPrefix}${this.name}`, this);
+export const withInstallComponent = (main, extra = {}) => {
+  main.install = (app, options) => {
+    const componentPrefix = getComponentPrefix(options);
+    [main, ...Object.values(extra)].forEach((compoent) => {
+      app.component(`${componentPrefix}${compoent.name}`, compoent);
+    });
+  };
+  return main;
 };

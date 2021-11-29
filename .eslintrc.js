@@ -16,5 +16,6 @@ module.exports = {
     'import/no-extraneous-dependencies': 0,
     'import/prefer-default-export': 0,
     'vue/multi-word-component-names': 0,
+    'no-param-reassign': 0,
   },
 };

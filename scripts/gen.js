@@ -20,40 +20,31 @@ if (fs.existsSync(`${basePath}/src/components/${componentName}`)) {
 fs.mkdirSync(`${basePath}/src/components/${componentName}`);
 
 fs.writeFileSync(`${basePath}/src/components/${componentName}/${componentName}.vue`, `<template>
-<div :class="\`\${cssPrefix}${componentName}\`">
-</div>
+  <div :class="\`\${CSS_PREFIX}${componentName}\`"></div>
 </template>
 
 <script>
-import { cssPrefix } from '@/defaultConfig';
+import { CSS_PREFIX } from '@/defaultConfig';
 
 export default {
   name: '${formatComponentName}',
   setup() {
     return {
-      cssPrefix,
+      CSS_PREFIX,
     };
   },
 };
 </script>
 
-<style lang="scss">
-@import './${componentName}.scss';
-</style>
+<style src="./${componentName}.scss" lang="scss"></style>
 `);
 fs.writeFileSync(`${basePath}/src/components/${componentName}/${componentName}.scss`, `@import '../../styles/var.scss';
 
 .${componentName} {}`);
 fs.writeFileSync(`${basePath}/src/components/${componentName}/index.js`, `import ${formatComponentName} from './${componentName}.vue';
-import { prefix } from '@/defaultConfig';
+import { withInstallComponent } from '@/utils/compoent';
 
-${formatComponentName}.install = (app, {
-  componentPrefix = prefix,
-} = {}) => {
-  app.component(\`\${componentPrefix.toUpperCase()}${formatComponentName}\`, ${formatComponentName});
-};
-
-export default ${formatComponentName};
+export default withInstallComponent(${formatComponentName});;
 `);
 
 require('./gen-compoents');

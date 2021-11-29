@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <v-button @click="handlerClick">Test</v-button>
-    <v-label :label="count"></v-label>
+    <!-- <v-button @click="handlerClick">Test</v-button> -->
+    <vv-label :label="count"></vv-label>
   </div>
 </template>
 <script>

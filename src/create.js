@@ -1,7 +1,6 @@
 function create(plugins) {
   return (app, options) => {
     (Array.isArray(plugins) ? plugins : Object.values(plugins)).forEach((plugin) => {
-      console.log(options);
       app.use(plugin, options);
     });
   };
