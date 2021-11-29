@@ -20,7 +20,7 @@
   ],
   "scripts": {
     "dev": "vue-cli-service serve dev/serve.js",
-    "build": "yarn gen:compoents && yarn build:es && yarn build:dist",
+    "build": "npm run gen:compoents && npm run build:es && npm run build:dist",
     "build:es": "rm -rf ./es && rollup --config ./build/build.es.js",
     "build:dist": "rm -rf ./dist && rollup --config ./build/build.dist.js",
     "build:style": "",
@@ -29,7 +29,10 @@
     "gen": "node ./scripts/gen.js",
     "gen:compoents": "node ./scripts/gen-compoents.js",
     "release": "standard-version && git push &&  git push origin --tags",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs"
   },
   "devDependencies": {
     "@commitlint/cli": "^15.0.0",
@@ -55,6 +58,7 @@
     "sass": "^1.43.5",
     "sass-loader": "^12.3.0",
     "standard-version": "^9.3.2",
+    "vitepress": "^0.20.1",
     "vue": "3.2.22"
   },
   "peerDependencies": {
@@ -68,5 +72,6 @@
     "*.{js,jsx,vue}": [
       "eslint --fix"
     ]
-  }
+  },
+  "dependencies": {}
 }
