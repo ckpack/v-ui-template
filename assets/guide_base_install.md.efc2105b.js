@@ -1,1 +1,0 @@
-import{_ as t,c as e,o as a,a as s}from"./app.0f8540b9.js";const m='{"title":"","description":"","frontmatter":{},"relativePath":"guide/base/install.md","lastUpdated":1638171654329}',o={},n=s("p",null,"\u5B89\u88C5",-1),r=[n];function c(l,_,i,p,d,f){return a(),e("div",null,r)}var h=t(o,[["render",c]]);export{m as __pageData,h as default};
