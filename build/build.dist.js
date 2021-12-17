@@ -11,6 +11,8 @@ const basePlugins = [
   plugins.commonjs,
 ];
 
+const baseExternal = external.vue;
+
 export default [
   {
     input,
@@ -21,9 +23,8 @@ export default [
     },
     plugins: [
       ...basePlugins,
-      plugins.postcss(),
     ],
-    external: external.vue,
+    external: baseExternal,
   },
   {
     input,
@@ -36,10 +37,9 @@ export default [
     },
     plugins: [
       ...basePlugins,
-      plugins.postcss(),
       plugins.terser,
     ],
-    external: external.vue,
+    external: baseExternal,
   },
   {
     input,
@@ -50,12 +50,8 @@ export default [
     },
     plugins: [
       ...basePlugins,
-      plugins.postcss({
-        minimize: false,
-        extract: 'index.css',
-      }),
     ],
-    external: external.vue,
+    external: baseExternal,
   },
   {
     input,
@@ -68,11 +64,8 @@ export default [
     },
     plugins: [
       ...basePlugins,
-      plugins.postcss({
-        extract: 'index.min.css',
-      }),
       plugins.terser,
     ],
-    external: external.vue,
+    external: baseExternal,
   },
 ];

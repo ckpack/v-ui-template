@@ -1,5 +1,5 @@
-@import '../../styles/var.scss';
+@use '../../styles/_var' as *;
 
-.label {
-  background-color: $primary;
+.#{$name}label {
+  background-color: $red;
 }

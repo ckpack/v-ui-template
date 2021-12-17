@@ -1,20 +1,19 @@
 <template>
-  <button :class="`${CSS_PREFIX}button`">
+  <button :class="`${P}button`">
     <slot></slot>
   </button>
 </template>
 
 <script>
-import { CSS_PREFIX } from '@/defaultConfig';
+import { defineComponent } from 'vue';
+import { CSS_PREFIX as P } from '@/defaultConfig';
 
-export default {
+export default defineComponent({
   name: 'Button',
   setup() {
     return {
-      CSS_PREFIX,
+      P,
     };
   },
-};
+});
 </script>
-
-<style src="./button.scss" lang="scss"></style>

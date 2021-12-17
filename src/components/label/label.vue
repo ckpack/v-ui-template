@@ -1,24 +1,23 @@
 <template>
-  <div :class="`${CSS_PREFIX}label`">
+  <div :class="`${P}label`">
     {{label}}
   </div>
 </template>
 
 <script>
-import { CSS_PREFIX } from '../../defaultConfig';
+import { defineComponent } from 'vue';
+import { CSS_PREFIX as P } from '@/defaultConfig';
 
-export default {
+export default defineComponent({
   name: 'Label',
   props: {
     label: [String, Number],
   },
   setup(props) {
     return {
-      CSS_PREFIX,
+      P,
       text: props.label,
     };
   },
-};
+});
 </script>
-
-<style src="./label.scss" lang="scss"></style>

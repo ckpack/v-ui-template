@@ -19,7 +19,6 @@ export default [
     plugins: [
       plugins.alias,
       plugins.vue,
-      plugins.postcss(),
       plugins.resolve,
     ],
     external: [...external.vue, ...external.dependencies],
