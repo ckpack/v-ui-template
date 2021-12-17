@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/ckpack/v-ui-template/compare/v1.2.2...v1.3.0) (2021-12-17)
+
+
+### Features
+
+* 默认导出支持自定义参数 ([9e3657f](https://github.com/ckpack/v-ui-template/commit/9e3657ff02d0003ec636a7e550e38c7eb05ea777))
+* add docs ([0613b35](https://github.com/ckpack/v-ui-template/commit/0613b3556b2e924708a7c810ce6c7be3bcfa7f07))
+
+
+### Bug Fixes
+
+* update docsBranch ([0cab8f8](https://github.com/ckpack/v-ui-template/commit/0cab8f87be0953b088801656d8a0a7527139bf9c))
+
 ### [1.2.2](https://github.com/ckpack/v-ui-template/compare/v1.2.1...v1.2.2) (2021-11-25)
 
 
