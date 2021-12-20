@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/ckpack/v-ui-template/compare/v1.3.0...v1.4.0) (2021-12-20)
+
+
+### Features
+
+* 导出版本号 ([e1ee54b](https://github.com/ckpack/v-ui-template/commit/e1ee54b99566bfb9698ffcd8ff416e87e82b89e5))
+* 添加文档 ([932f9bd](https://github.com/ckpack/v-ui-template/commit/932f9bd1830bd80897c3260644ad60767f245a40))
+* 优化项目结构 ([170d332](https://github.com/ckpack/v-ui-template/commit/170d3322977776feb51a4b654d8311791e0b095f))
+
+
+### Bug Fixes
+
+* 修改默认type(vitepress 不支持module类型 ） ([241e85e](https://github.com/ckpack/v-ui-template/commit/241e85ed5107cfc1643a2ecb3798663ca62ff76f))
+* 修改组件类型变量名称 ([cf4dbef](https://github.com/ckpack/v-ui-template/commit/cf4dbef7727b013af0e8aafdfdc7a171c45503ed))
+
 ## [1.3.0](https://github.com/ckpack/v-ui-template/compare/v1.2.2...v1.3.0) (2021-12-17)
 
 
