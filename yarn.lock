@@ -2,6 +2,25 @@
 # yarn lockfile v1
 
 
+"@algolia/autocomplete-core@1.5.0":
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/@algolia/autocomplete-core/-/autocomplete-core-1.5.0.tgz#6c91c9de7748e9c103846828a58dfe92bd4d6689"
+  integrity sha512-E7+VJwcvwMM8vPeaVn7fNUgix8WHV8A1WUeHDi2KHemCaaGc8lvUnP3QnvhMxiDhTe7OpMEv4o2TBUMyDgThaw==
+  dependencies:
+    "@algolia/autocomplete-shared" "1.5.0"
+
+"@algolia/autocomplete-preset-algolia@1.5.0":
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/@algolia/autocomplete-preset-algolia/-/autocomplete-preset-algolia-1.5.0.tgz#61671f09c0c77133d9baf1356719f8378c48437a"
+  integrity sha512-iiFxKERGHkvkiupmrFJbvESpP/zv5jSgH714XRiP5LDvUHaYOo4GLAwZCFf2ef/L5tdtPBARvekn6k1Xf33gjA==
+  dependencies:
+    "@algolia/autocomplete-shared" "1.5.0"
+
+"@algolia/autocomplete-shared@1.5.0":
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/@algolia/autocomplete-shared/-/autocomplete-shared-1.5.0.tgz#09580bc89408a2ab5f29e312120dad68f58019bd"
+  integrity sha512-bRSkqHHHSwZYbFY3w9hgMyQRm86Wz27bRaGCbNldLfbk0zUjApmE4ajx+ZCVSLqxvcUEjMqZFJzDsder12eKsg==
+
 "@algolia/cache-browser-local-storage@4.11.0":
   version "4.11.0"
   resolved "https://registry.yarnpkg.com/@algolia/cache-browser-local-storage/-/cache-browser-local-storage-4.11.0.tgz#1c168add00b398a860db6c86039e33b2843a9425"
@@ -272,27 +291,27 @@
   dependencies:
     chalk "^4.0.0"
 
-"@docsearch/css@^1.0.0-alpha.28":
-  version "1.0.0-alpha.28"
-  resolved "https://registry.yarnpkg.com/@docsearch/css/-/css-1.0.0-alpha.28.tgz#c8a2cd8c1bb3a6855c51892e9dbdab5d42fe6e23"
-  integrity sha512-1AhRzVdAkrWwhaxTX6/R7SnFHz8yLz1W8I/AldlTrfbNvZs9INk1FZiEFTJdgHaP68nhgQNWSGlQiDiI3y2RYg==
+"@docsearch/css@3.0.0-alpha.42", "@docsearch/css@^3.0.0-alpha.41":
+  version "3.0.0-alpha.42"
+  resolved "https://registry.yarnpkg.com/@docsearch/css/-/css-3.0.0-alpha.42.tgz#deb6049e999d6ca9451eba4793cb5b6da28c8773"
+  integrity sha512-AGwI2AXUacYhVOHmYnsXoYDJKO6Ued2W+QO80GERbMLhC7GH5tfvtW5REs/s7jSdcU3vzFoxT8iPDBCh/PkrlQ==
 
-"@docsearch/js@^1.0.0-alpha.28":
-  version "1.0.0-alpha.28"
-  resolved "https://registry.yarnpkg.com/@docsearch/js/-/js-1.0.0-alpha.28.tgz#f0fde7b8a6b1e1d8a7ae1e7655c43d959b457b2b"
-  integrity sha512-2g7aPhBy7FoEyeZW2G3LYHWVa8CFvqyozEz8PXt3hyywdFcmEIqmoCRwn8kboVftrOKCjtPcuLCewsaBoB3uiw==
+"@docsearch/js@^3.0.0-alpha.41":
+  version "3.0.0-alpha.42"
+  resolved "https://registry.yarnpkg.com/@docsearch/js/-/js-3.0.0-alpha.42.tgz#3cef648da141994c8bb1d0f13afbdb0a1e9d8daa"
+  integrity sha512-8rxxsvFKS5GzDX2MYMETeib4EOwAkoxVUHFP5R4tSENXojhuCEy3np+k3Q0c9WPT+MUmWLxKJab5jyl0jmaeBQ==
   dependencies:
-    "@docsearch/react" "^1.0.0-alpha.28"
+    "@docsearch/react" "3.0.0-alpha.42"
     preact "^10.0.0"
 
-"@docsearch/react@^1.0.0-alpha.28":
-  version "1.0.0-alpha.28"
-  resolved "https://registry.yarnpkg.com/@docsearch/react/-/react-1.0.0-alpha.28.tgz#4f039ed79f8b3332b19a57677b219aebc5010e9d"
-  integrity sha512-XjJOnCBXn+UZmtuDmgzlVIHnnvh6yHVwG4aFq8AXN6xJEIX3f180FvGaowFWAxgdtHplJxFGux0Xx4piHqBzIw==
+"@docsearch/react@3.0.0-alpha.42":
+  version "3.0.0-alpha.42"
+  resolved "https://registry.yarnpkg.com/@docsearch/react/-/react-3.0.0-alpha.42.tgz#1d22a2b05779f24d090ff8d7ff2699e4d50dff5c"
+  integrity sha512-1aOslZJDxwUUcm2QRNmlEePUgL8P5fOAeFdOLDMctHQkV2iTja9/rKVbkP8FZbIUnZxuuCCn8ErLrjD/oXWOag==
   dependencies:
-    "@docsearch/css" "^1.0.0-alpha.28"
-    "@francoischalifour/autocomplete-core" "^1.0.0-alpha.28"
-    "@francoischalifour/autocomplete-preset-algolia" "^1.0.0-alpha.28"
+    "@algolia/autocomplete-core" "1.5.0"
+    "@algolia/autocomplete-preset-algolia" "1.5.0"
+    "@docsearch/css" "3.0.0-alpha.42"
     algoliasearch "^4.0.0"
 
 "@endemolshinegroup/cosmiconfig-typescript-loader@^3.0.2":
@@ -319,16 +338,6 @@
     js-yaml "^4.1.0"
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
-
-"@francoischalifour/autocomplete-core@^1.0.0-alpha.28":
-  version "1.0.0-alpha.28"
-  resolved "https://registry.yarnpkg.com/@francoischalifour/autocomplete-core/-/autocomplete-core-1.0.0-alpha.28.tgz#6b9d8491288e77f831e9b345d461623b0d3f5005"
-  integrity sha512-rL9x+72btViw+9icfBKUJjZj87FgjFrD2esuTUqtj4RAX3s4AuVZiN8XEsfjQBSc6qJk31cxlvqZHC/BIyYXgg==
-
-"@francoischalifour/autocomplete-preset-algolia@^1.0.0-alpha.28":
-  version "1.0.0-alpha.28"
-  resolved "https://registry.yarnpkg.com/@francoischalifour/autocomplete-preset-algolia/-/autocomplete-preset-algolia-1.0.0-alpha.28.tgz#a5ad7996f42e43e4acbb4e0010d663746d0e9997"
-  integrity sha512-bprfNmYt1opFUFEtD2XfY/kEsm13bzHQgU80uMjhuK0DJ914IjolT1GytpkdM6tJ4MBvyiJPP+bTtWO+BZ7c7w==
 
 "@hapi/address@2.x.x":
   version "2.1.4"
@@ -652,10 +661,10 @@
     anymatch "^3.0.0"
     source-map "^0.6.0"
 
-"@vitejs/plugin-vue@^1.9.0":
-  version "1.10.2"
-  resolved "https://registry.yarnpkg.com/@vitejs/plugin-vue/-/plugin-vue-1.10.2.tgz#d718479e2789d8a94b63e00f23f1898ba239253a"
-  integrity sha512-/QJ0Z9qfhAFtKRY+r57ziY4BSbGUTGsPRMpB/Ron3QPwBZM4OZAZHdTa4a8PafCwU5DTatXG8TMDoP8z+oDqJw==
+"@vitejs/plugin-vue@^2.0.0":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@vitejs/plugin-vue/-/plugin-vue-2.0.1.tgz#db0e5eacf96358e04cc501c9008079b25a70a4ac"
+  integrity sha512-wtdMnGVvys9K8tg+DxowU1ytTrdVveXr3LzdhaKakysgGXyrsfaeds2cDywtvujEASjWOwWL/OgWM+qoeM8Plg==
 
 "@vue/cli-overlay@^4.5.15":
   version "4.5.15"
@@ -7029,7 +7038,7 @@ postcss@^8.1.10:
     nanoid "^3.1.23"
     source-map-js "^0.6.2"
 
-postcss@^8.3.11:
+postcss@^8.4.5:
   version "8.4.5"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.4.5.tgz#bae665764dfd4c6fcc24dc0fdf7e7aa00cc77f95"
   integrity sha512-jBDboWM8qpaqwkMwItqTQTiFikhs/67OYVvblFFTM7MrZjt6yMKd6r2kgXizEbTTljacm4NldIlZnhbjr84QYg==
@@ -8848,29 +8857,29 @@ verror@1.10.0:
     core-util-is "1.0.2"
     extsprintf "^1.2.0"
 
-vite@^2.6.5:
-  version "2.7.3"
-  resolved "https://registry.yarnpkg.com/vite/-/vite-2.7.3.tgz#e983cf4f71f42c192436bfcad1b75932642da293"
-  integrity sha512-GAY1P+9fLJOju1SRm8+hykVnEXog+E+KXuqqyMBQDriKCUIKzWnPn142yNNhSdf/ixYGYdUa5ce3A8WaEajzGw==
+vite@^2.7.0:
+  version "2.7.4"
+  resolved "https://registry.yarnpkg.com/vite/-/vite-2.7.4.tgz#06f68f8909943f9fe582c26120b0c2b85894a05e"
+  integrity sha512-f+0426k9R/roz5mRNwJlQ+6UOnhCwIypJSbfgCmsVzVJe9jTTM5iRX2GWYUean+iqPBWaU/dYLryx9AoH2pmrw==
   dependencies:
     esbuild "^0.13.12"
-    postcss "^8.3.11"
+    postcss "^8.4.5"
     resolve "^1.20.0"
     rollup "^2.59.0"
   optionalDependencies:
     fsevents "~2.3.2"
 
-vitepress@0.20.1:
-  version "0.20.1"
-  resolved "https://registry.yarnpkg.com/vitepress/-/vitepress-0.20.1.tgz#34d39950a5062a4efa5621be3a78c005f656faee"
-  integrity sha512-2SOlvRv0bvPrQ3RPtp7Fh/G1MKidrsgAgYz18OvV+nIJb9iiYo0GUVHKN3OYswMh+vH78NyTeA1Q5v4YJ/H9LQ==
+vitepress@0.20.9:
+  version "0.20.9"
+  resolved "https://registry.yarnpkg.com/vitepress/-/vitepress-0.20.9.tgz#aa8ca4889a1941a8c4f2be44938c362f38187057"
+  integrity sha512-2Rd6NMS5sTVl+3HDM9EzIMi3JOTNz1DjylvbYEWjxPyCmL3OH0lEez7O4FAijCkS5+i3VcwygxisadonMhtYkw==
   dependencies:
-    "@docsearch/css" "^1.0.0-alpha.28"
-    "@docsearch/js" "^1.0.0-alpha.28"
-    "@vitejs/plugin-vue" "^1.9.0"
+    "@docsearch/css" "^3.0.0-alpha.41"
+    "@docsearch/js" "^3.0.0-alpha.41"
+    "@vitejs/plugin-vue" "^2.0.0"
     prismjs "^1.25.0"
-    vite "^2.6.5"
-    vue "^3.2.19"
+    vite "^2.7.0"
+    vue "^3.2.26"
 
 vm-browserify@^1.0.1:
   version "1.1.2"
@@ -8941,7 +8950,7 @@ vue-template-es2015-compiler@^1.9.0:
   resolved "https://registry.yarnpkg.com/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.9.1.tgz#1ee3bc9a16ecbf5118be334bb15f9c46f82f5825"
   integrity sha512-4gDntzrifFnCEvyoO8PqyJDmguXgVPxKiIxrBKjIowvL9l+N66196+72XVYR8BBf1Uv1Fgt3bGevJ+sEmxfZzw==
 
-vue@3.2.26, vue@^3.2.19:
+vue@3.2.26, vue@^3.2.26:
   version "3.2.26"
   resolved "https://registry.yarnpkg.com/vue/-/vue-3.2.26.tgz#5db575583ecae495c7caa5c12fd590dffcbb763e"
   integrity sha512-KD4lULmskL5cCsEkfhERVRIOEDrfEL9CwAsLYpzptOGjaGFNWo3BQ9g8MAb7RaIO71rmVOziZ/uEN/rHwcUIhg==

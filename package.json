@@ -56,7 +56,7 @@
     "rollup-plugin-vue": "^6.0.0",
     "sass": "^1.45.0",
     "standard-version": "^9.3.2",
-    "vitepress": "0.20.1",
+    "vitepress": "0.20.9",
     "vue": "3.2.26"
   },
   "peerDependencies": {
