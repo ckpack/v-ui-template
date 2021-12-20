@@ -1,15 +1,17 @@
+
+[ENGLISH](https://ckpack.github.io/v-ui-template/en/)
 # v-ui-template
 
  你可以使用该项目快速创建基于vue 3.0的组件库。 这是生成 vue 组件库的超快、超简单的方式！
 
-# 功能特点
+## 功能特点
 
 + 通过命令快速添加新组件
 + 所以组件默认支持按需加载
 + 可自定义组件前缀，避免组件名称、样式冲突
 + 支持组件库文档生成
 + 默认支持生成`CHANGELOG`
-# 脚本命令
+## 脚本命令
 
 详细命令参考`package.json`的`scripts`部分
 
@@ -33,7 +35,7 @@ yarn release
 yarn docs:dev
 ```
 
-# 用例
+## 用例
 
 #### 完整引入
 
@@ -71,7 +73,7 @@ app.mount('#app');
 </template>
 ```
 
-##### 浏览器直接引入
+#### 浏览器直接引入
 
 你也可以直接通过浏览器的`script`, `style`标签导入。
 
@@ -109,14 +111,14 @@ app.mount('#app');
 </html>
 ```
 
-# 样式
-## 全局引入样式
+## 样式
+#### 全局引入样式
 
 ```js
 import 'v-ui-template/dist/index.css';
 ```
 
-## 按需引入样式
+#### 按需引入样式
 
 ```js
 import 'v-ui-template/es/components/button/button.css';
