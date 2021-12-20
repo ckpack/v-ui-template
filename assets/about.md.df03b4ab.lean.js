@@ -1,1 +1,0 @@
-import{_ as t,c as e,o as a,a as o}from"./app.feb75059.js";const m='{"title":"","description":"","frontmatter":{},"relativePath":"about.md","lastUpdated":1639997364252}',s={},r=o("p",null,"\u5173\u4E8E v-ui-template",-1),c=[r];function n(p,_,d,i,l,u){return a(),e("div",null,c)}var h=t(s,[["render",n]]);export{m as __pageData,h as default};
