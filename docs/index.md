@@ -80,9 +80,9 @@ app.mount('#app');
 <html lang="en">
 <head>
   <title>VUI</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/v-ui-template/dist/index.css">
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.global.prod.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/v-ui-template/dist/index.min.js"></script>
-  <style href="https://cdn.jsdelivr.net/npm/v-ui-template/dist/index.css"></style>
 </head>
 <body>
   <div id="app">
