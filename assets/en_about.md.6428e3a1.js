@@ -1,1 +1,0 @@
-import{_ as t,c as e,o as a,a as o}from"./app.eca0e492.js";const m='{"title":"","description":"","frontmatter":{},"relativePath":"en/about.md","lastUpdated":1639994677519}',s={},c=o("p",null,"About v-ui-template",-1),n=[c];function r(p,_,d,i,l,u){return a(),e("div",null,n)}var h=t(s,[["render",r]]);export{m as __pageData,h as default};
