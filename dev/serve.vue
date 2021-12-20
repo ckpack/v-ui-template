@@ -1,24 +1,22 @@
 <template>
-  <div id="app">
-    <v-button @click="handlerClick">Test</v-button>
-    <v-label :label="count"></v-label>
-  </div>
+  <ConfigProvider>
+    <div id="app">
+      <PVButton></PVButton>
+      <PVLabel></PVLabel>
+    </div>
+  </ConfigProvider>
 </template>
 <script>
-import { ref } from 'vue';
+import { ConfigProvider } from '../es';
+import PVButton from './preview/v-button.vue';
+import PVLabel from './preview/v-label.vue';
 
 export default {
   name: 'ServeDev',
-  setup() {
-    const count = ref(0);
-
-    const handlerClick = () => {
-      count.value += 1;
-    };
-    return {
-      count,
-      handlerClick,
-    };
+  components: {
+    ConfigProvider,
+    PVButton,
+    PVLabel,
   },
 };
 </script>

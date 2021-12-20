@@ -3,19 +3,19 @@
 </template>
 
 <script>
-import { defineComponent, provide } from 'vue';
-import { configProvideInjectKey, CSS_PREFIX } from '@/defaultConfig';
+import { defineComponent, provide, reactive } from 'vue';
+import { configProvideInjectKey, CLS_PREFIX } from '@/defaultConfig';
 
 export default defineComponent({
   name: 'ConfigProvider',
   props: {
-    cssPrefix: {
+    clsPrefix: {
       type: String,
-      default: CSS_PREFIX,
+      default: CLS_PREFIX,
     },
   },
   setup(props) {
-    provide(configProvideInjectKey, props);
+    provide(configProvideInjectKey, reactive(props));
   },
 });
 </script>

@@ -20,6 +20,7 @@ export default [
       plugins.alias,
       plugins.vue,
       plugins.resolve,
+      plugins.json,
     ],
     external: [...external.vue, ...external.dependencies],
   },

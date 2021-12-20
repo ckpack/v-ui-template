@@ -1,4 +1,4 @@
-const fs = require('fs');
+import fs from 'fs';
 
 function formatComponent(component) {
   return component.split('-').map((name) => name.slice(0, 1).toUpperCase() + name.slice(1)).join('');
@@ -46,5 +46,3 @@ import { withInstallComponent } from '@/utils/compoent';
 
 export default withInstallComponent(${formatComponentName});;
 `);
-
-require('./gen-compoents');

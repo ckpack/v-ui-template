@@ -1,12 +1,12 @@
 <template>
-  <div :class="`${P}label`">
+  <div :class="prefix">
     {{label}}
   </div>
 </template>
 
 <script>
 import { defineComponent } from 'vue';
-import { CSS_PREFIX as P } from '@/defaultConfig';
+import { getClsPrefix } from '@/defaultConfig';
 
 export default defineComponent({
   name: 'Label',
@@ -14,8 +14,9 @@ export default defineComponent({
     label: [String, Number],
   },
   setup(props) {
+    const prefix = getClsPrefix('button');
     return {
-      P,
+      prefix,
       text: props.label,
     };
   },

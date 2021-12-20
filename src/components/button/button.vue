@@ -1,18 +1,19 @@
 <template>
-  <button :class="`${P}button`">
+  <button :class="prefix">
     <slot></slot>
   </button>
 </template>
 
 <script>
 import { defineComponent } from 'vue';
-import { CSS_PREFIX as P } from '@/defaultConfig';
+import { getClsPrefix } from '@/defaultConfig';
 
 export default defineComponent({
   name: 'Button',
   setup() {
+    const prefix = getClsPrefix('button');
     return {
-      P,
+      prefix,
     };
   },
 });
