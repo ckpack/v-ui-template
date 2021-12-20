@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://github.com/ckpack/v-ui-template/compare/v1.4.1...v1.5.0) (2021-12-20)
+
+
+### Features
+
+* 默认语言修改成英文 ([89e7a50](https://github.com/ckpack/v-ui-template/commit/89e7a50a9bd6a5cc176057146ef01c02f8404eae))
+* 添加homepage ([cb040d8](https://github.com/ckpack/v-ui-template/commit/cb040d80f9d7cf32d4e927831992d5bf96c11737))
+
 ### [1.4.1](https://github.com/ckpack/v-ui-template/compare/v1.4.0...v1.4.1) (2021-12-20)
 
 
