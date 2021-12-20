@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.1](https://github.com/ckpack/v-ui-template/compare/v1.4.0...v1.4.1) (2021-12-20)
+
+
+### Bug Fixes
+
+* update docs ([f49909e](https://github.com/ckpack/v-ui-template/commit/f49909ebf1cd7fef4c45ced0d13b722dd90c6d42))
+* update vitepress version ([f932ecd](https://github.com/ckpack/v-ui-template/commit/f932ecdc89ec5b6116b1049e75c1321aa7e61de8))
+
 ## [1.4.0](https://github.com/ckpack/v-ui-template/compare/v1.3.0...v1.4.0) (2021-12-20)
 
 
