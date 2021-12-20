@@ -3,6 +3,7 @@ import path from 'path';
 import resolve from '@rollup/plugin-node-resolve';
 import alias from '@rollup/plugin-alias';
 import commonjs from '@rollup/plugin-commonjs';
+import json from '@rollup/plugin-json';
 import vue from 'rollup-plugin-vue';
 import { terser } from 'rollup-plugin-terser';
 import { NAME } from '../src/defaultConfig';
@@ -25,6 +26,7 @@ const plugins = {
   }),
   resolve: resolve(),
   terser: terser(),
+  json: json(),
   vue: vue({
     include: [/\.vue$/i],
     target: 'browser',
