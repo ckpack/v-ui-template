@@ -1,5 +1,5 @@
 <template>
-  <ConfigProvider>
+  <ConfigProvider cls-prefix="v-">
     <div id="app">
       <PVButton></PVButton>
       <PVLabel></PVLabel>

@@ -1,5 +1,5 @@
-@use '../../styles/_var' as *;
+@use '../../styles/_variables' as *;
 
-.#{$name}button {
+.#{$cls-prefix}button {
   background-color: $green;
 }

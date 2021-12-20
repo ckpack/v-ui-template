@@ -14,7 +14,7 @@ export default defineComponent({
     label: [String, Number],
   },
   setup(props) {
-    const prefix = getClsPrefix('button');
+    const prefix = getClsPrefix('label');
     return {
       prefix,
       text: props.label,
