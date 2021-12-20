@@ -28,7 +28,7 @@
     "build:style": "sass --no-source-map --style=compressed ./src:es",
     "build:website": "vue-cli-service build --dest website dev/serve.js",
     "lint": "eslint --fix --ext .js,.vue ./",
-    "gen": "node ./scripts/gen.js && npm run gen:compoents",
+    "gen": "node ./scripts/gen.mjs && npm run gen:compoents",
     "gen:compoents": "node ./scripts/gen-compoents.mjs",
     "release": "standard-version && git push &&  git push origin --tags",
     "prepare": "husky install",
