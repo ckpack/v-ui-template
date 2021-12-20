@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.5.1](https://github.com/ckpack/v-ui-template/compare/v1.5.0...v1.5.1) (2021-12-20)
+
+
+### Bug Fixes
+
+* 导出默认中作为install函数 ([8d68d62](https://github.com/ckpack/v-ui-template/commit/8d68d62191c6fea40687074e992ce5df426bfa09))
+
 ## [1.5.0](https://github.com/ckpack/v-ui-template/compare/v1.4.1...v1.5.0) (2021-12-20)
 
 

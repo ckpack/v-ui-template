@@ -2,7 +2,7 @@
   "name": "v-ui-template",
   "sideEffects": false,
   "description": "Quickly create templates for vue sfc components",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "repository": "https://github.com/ckpack/v-ui-template",
   "homepage": "https://ckpack.github.io/v-ui-template/",
   "type": "commonjs",
