@@ -5,6 +5,10 @@ module.exports = {
   title: package.name,
   description: package.description,
   base: `/${package.name}/`,
+  locales: {
+    '/': { lang: 'zh-CN' },
+    '/en/': { lang: 'en-US' },
+  },
   themeConfig: {
     repo: package.repository,
     docsDir: 'docs',
@@ -12,6 +16,15 @@ module.exports = {
     editLinks: true,
     editLinkText: 'Edit this page on GitHub',
     lastUpdated: 'Last Updated',
-    ...bar,
+    locales: {
+      '/': {
+        label: '中文',
+        ...bar,
+      },
+      '/en/': {
+        label: 'English',
+        ...bar,
+      },
+    },
   }
 };

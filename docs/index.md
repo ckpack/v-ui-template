@@ -1,38 +1,49 @@
 # v-ui-template
 
- Quickly create templates for vue 3.0 SFC (single-file-components). It's the fastest way to produce npm-ready vue components!
+ 你可以使用该项目快速创建基于vue 3.0的组件库。 这是生成 vue 组件库的超快、超简单的方式！
 
-# Scripts
+## 功能特点
 
-#### Install dependencies 
++ 通过命令快速添加新组件
++ 所以组件默认支持按需加载
++ 可自定义组件前缀，避免组件名称、样式冲突
++ 支持组件库文档生成
++ 默认支持生成`CHANGELOG`
+## 脚本命令
 
-```
+详细命令参考`package.json`的`scripts`部分
+
+```bash
+# 安装依赖
 yarn
-```
 
-#### Generate new component
-
-```
+# 添加新组件
 yarn gen component-name
-```
 
-### Packaging your SFC
-
-```
+# 打包你的组件库
 yarn build
+
+# 检查代码规范
+yarn lint
+
+# 生成日志文件发布新版本
+yarn release
+
+# 生成文档相关命令
+yarn docs:dev
 ```
 
+## 用例
 
-# Use case
+#### 完整引入
 
-#### Fully import
-
-imports components entirely.
+完整引入组件库。
 
 ```js
 import { createApp } from 'vue';
 import App from '@/App.vue';
 import VUI from 'v-ui-template';
+import 'v-ui-template/dist/index.scss';
 
 const app = createApp(App);
 
@@ -40,18 +51,17 @@ app.use(VUI);
 app.mount('#app');
 ```
 
-#### On demand
+#### 按需加载
 
-We can import components we actually need, making the project smaller than otherwise.
+默认支持`tree shaking`，无需任何插件，直接引入 `import { Button } from 'v-ui-template'` 就会有按需加载的效果。
 
-##### Import Directly
 
 ```html
 <script>
-  import { Button, Label } from 'v-ui-template';
+  import { Button as VButton } from 'v-ui-template';
   export default {
     components: {
-      VButton: Button,
+      VButton,
     },
   }
 </script>
@@ -61,48 +71,18 @@ We can import components we actually need, making the project smaller than other
 </template>
 ```
 
-##### Install on Demand Globally 
+#### 浏览器直接引入
 
-```js
-import { createApp } from 'vue';
-import App from '@/App.vue';
-import { Button, Label } from 'v-ui-template';
-
-const app = createApp(App);
-app.use(Button);
-app.use(Label);
-app.mount('#app');
-```
-
-Or use the more convenient create like this
-
-```js
-import { createApp } from 'vue';
-import App from '@/App.vue';
-import { Button, Label, create } from 'v-ui-template';
-
-const app = createApp(App);
-
-app.use(create([Button, Label]));
-app.mount('#app');
-```
-
-Then we can use the component
-
-```html
-  <v-button @click="handlerClick">Test</v-button>
-```
-#### Use in page
-
-import JavaScript and CSS file in your page.
+你也可以直接通过浏览器的`script`, `style`标签导入。
 
 ```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <title>VUI</title>
-  <script src="https://unpkg.com/vue@3.2.4/dist/vue.global.prod.js"></script>
-  <script src="https://unpkg.com/v-ui-template@1.0.3/dist/index.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.global.prod.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/v-ui-template/dist/index.min.js"></script>
+  <style href="https://cdn.jsdelivr.net/npm/v-ui-template/dist/index.css"></style>
 </head>
 <body>
   <div id="app">
@@ -129,23 +109,16 @@ import JavaScript and CSS file in your page.
 </html>
 ```
 
-#### Options params
-
-We can change the component prefix by options params
+## 样式
+#### 全局引入样式
 
 ```js
-app.use(Button, {
-  componentPrefix: 'k',
-});
-
-// or
-app.use(create([Button, Label]), {
-  componentPrefix: 'k',
-});
+import 'v-ui-template/dist/index.css';
 ```
 
-Then we can use the new component prefix
+#### 按需引入样式
 
-```html
-  <k-button @click="handlerClick">Test</k-button>
+```js
+import 'v-ui-template/es/components/button/button.css';
+import 'v-ui-template/es/components/label/label.css';
 ```
