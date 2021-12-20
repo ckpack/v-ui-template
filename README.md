@@ -1,50 +1,55 @@
+<h1 align="center">v-ui-template</h1>
 
-[ENGLISH](https://ckpack.github.io/v-ui-template/en/)
-# v-ui-template
+<h4 align="center">
+  <a href="https://ckpack.github.io/v-ui-template/">中文</a>
+  |
+  <a href="https://ckpack.github.io/v-ui-template/en/">ENGLISH</a>
+</h4>
 
- 你可以使用该项目快速创建基于vue 3.0的组件库。 这是生成 vue 组件库的超快、超简单的方式！
+ You can use this project to quickly create a component library based on vue 3.0. This is a super fast and super simple way to generate a vue component library!
 
-## 功能特点
+## Features
 
-+ 通过命令快速添加新组件
-+ 所以组件默认支持按需加载
-+ 可自定义组件前缀，避免组件名称、样式冲突
-+ 支持组件库文档生成
-+ 默认支持生成`CHANGELOG`
-## 脚本命令
++ Quickly add new components via commands
++ So components support on-demand loading by default
++ Customizable component prefix to avoid component name and style conflicts
++ Support component library document generation
++ Support generating `CHANGELOG` by default
 
-详细命令参考`package.json`的`scripts`部分
+## Script command
+
+For detailed commands, refer to the `scripts` part of `package.json`
 
 ```bash
-# 安装依赖
+# Installation dependencies
 yarn
 
-# 添加新组件
+# Add new component
 yarn gen component-name
 
-# 打包你的组件库
+# Package your component library
 yarn build
 
-# 检查代码规范
+# Check the code specification
 yarn lint
 
-# 生成日志文件发布新版本
+# Generate log file to release new version
 yarn release
 
-# 生成文档相关命令
+# Generate documentation related commands
 yarn docs:dev
 ```
 
-## 用例
+## Example
 
-#### 完整引入
+#### Full introduction
 
-完整引入组件库。
+Fully introduce the component library.
 
 ```js
-import { createApp } from 'vue';
-import App from '@/App.vue';
-import VUI from 'v-ui-template';
+import {createApp} from'vue';
+import App from'@/App.vue';
+import VUI from'v-ui-template';
 import 'v-ui-template/dist/index.scss';
 
 const app = createApp(App);
@@ -53,14 +58,14 @@ app.use(VUI);
 app.mount('#app');
 ```
 
-#### 按需加载
+#### Load on demand
 
-默认支持`tree shaking`，无需任何插件，直接引入 `import { Button } from 'v-ui-template'` 就会有按需加载的效果。
+By default, `tree shaking` is supported, no plug-in is needed. Directly importing `import {Button} from'v-ui-template'` will have the effect of loading on demand.
 
 
 ```html
 <script>
-  import { Button as VButton } from 'v-ui-template';
+  import {Button as VButton} from'v-ui-template';
   export default {
     components: {
       VButton,
@@ -73,9 +78,9 @@ app.mount('#app');
 </template>
 ```
 
-#### 浏览器直接引入
+#### Browser Directly Introduce
 
-你也可以直接通过浏览器的`script`, `style`标签导入。
+You can also import it directly through the browser's `script`, `style` tags.
 
 ```html
 <!DOCTYPE html>
@@ -111,14 +116,15 @@ app.mount('#app');
 </html>
 ```
 
-## 样式
-#### 全局引入样式
+## Style
+
+#### Globally introduce styles
 
 ```js
 import 'v-ui-template/dist/index.css';
 ```
 
-#### 按需引入样式
+#### Introduce styles on demand
 
 ```js
 import 'v-ui-template/es/components/button/button.css';
