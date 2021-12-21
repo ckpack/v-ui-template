@@ -37,7 +37,7 @@ export default {
 };
 </script>
 `);
-fs.writeFileSync(`${basePath}/src/components/${componentName}/${componentName}.scss`, `@use '../../styles/_variables' as *;
+fs.writeFileSync(`${basePath}/src/components/${componentName}/index.scss`, `@use '../../styles/_variables' as *;
 
 .#{$cls-prefix}${componentName} {}`);
 fs.writeFileSync(`${basePath}/src/components/${componentName}/index.js`, `import ${formatComponentName} from './${componentName}.vue';

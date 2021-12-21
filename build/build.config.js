@@ -1,5 +1,4 @@
 import path from 'path';
-
 import resolve from '@rollup/plugin-node-resolve';
 import alias from '@rollup/plugin-alias';
 import commonjs from '@rollup/plugin-commonjs';

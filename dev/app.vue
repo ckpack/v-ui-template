@@ -1,10 +1,10 @@
 <template>
-  <ConfigProvider cls-prefix="v-">
-    <div id="app">
+  <div id="app">
+    <ConfigProvider cls-prefix="v-">
       <PVButton></PVButton>
       <PVLabel></PVLabel>
-    </div>
-  </ConfigProvider>
+    </ConfigProvider>
+  </div>
 </template>
 <script>
 import { ConfigProvider } from '../es';
@@ -20,3 +20,5 @@ export default {
   },
 };
 </script>
+
+<style src="../src/styles/index.scss" lang="scss"></style>
