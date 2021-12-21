@@ -1,22 +1,22 @@
-yar<template>
+<template>
   <div id="app">
     <ConfigProvider cls-prefix="v-">
-      <PButton></PButton>
-      <PLabel></PLabel>
+      <ButtonWrap></ButtonWrap>
+      <LabelWrap></LabelWrap>
     </ConfigProvider>
   </div>
 </template>
 <script>
 import { ConfigProvider } from '../es';
-import PButton from './preview/button.vue';
-import PLabel from './preview/label.vue';
+import ButtonWrap from './compoents/button-wrap.vue';
+import LabelWrap from './compoents/label-wrap.vue';
 
 export default {
   name: 'ServeDev',
   components: {
     ConfigProvider,
-    PButton,
-    PLabel,
+    ButtonWrap,
+    LabelWrap,
   },
 };
 </script>
