@@ -1,16 +1,16 @@
-const bar = require('./bar');
-const package = require('../../package.json');
+const { getNav, getSidebar } = require('./bar');
+const { name, description, repository } = require('../../package.json');
 
 module.exports = {
-  title: package.name,
-  description: package.description,
-  base: `/${package.name}/`,
+  title: name,
+  description: description,
+  base: `/${name}/`,
   locales: {
     '/': { lang: 'zh-CN' },
     '/en/': { lang: 'en-US' },
   },
   themeConfig: {
-    repo: package.repository,
+    repo: repository,
     docsDir: 'docs',
     docsBranch: 'main',
     editLinks: true,
@@ -19,11 +19,13 @@ module.exports = {
     locales: {
       '/': {
         label: '中文',
-        ...bar,
+        nav: getNav(),
+        sidebar: getSidebar(),
       },
       '/en/': {
         label: 'English',
-        ...bar,
+        nav: getNav('/en'),
+        sidebar: getSidebar('/en'),
       },
     },
   }

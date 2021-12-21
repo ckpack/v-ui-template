@@ -1,49 +1,51 @@
 const fs = require('fs');
 const path = require('path');
 
-const compoents = fs.readdirSync(path.join(__dirname, '../guide/compoents')).filter(compoent => /^[a-zA-Z].+\.md$/.test(compoent)).map((compoent) => {
-  const name = compoent.split('.').shift();
-  return {
-    text: `${name[0].toUpperCase()}${name.slice(1)}`,
-    link: `/guide/compoents/${name}`,
-  }
-});
+function getCompoents(lang){
+  return fs.readdirSync(path.join(__dirname, '../guide/compoents')).filter(compoent => /^[a-zA-Z].+\.md$/.test(compoent)).map((compoent) => {
+    const name = compoent.split('.').shift();
+    return {
+      text: name,
+      link: `${lang}/guide/compoents/${name}`,
+    }
+  });
+}
 
-function getGuideSidebar() {
+function getGuideSidebar(lang) {
   return [{
       text: 'Base',
       children: [{
         text: 'Install',
-        link: '/guide/base/install'
+        link: `${lang}/guide/base/install`
       }]
     },
     {
       text: 'Compoents',
-      children: compoents,
+      children: getCompoents(lang),
     }
   ];
 }
 
-function getSidebar() {
+function getSidebar(lang = '') {
   return {
-    '/guide/': getGuideSidebar(),
-    '/': getGuideSidebar(),
+    [`${lang}/guide/`]: getGuideSidebar(lang),
+    [`${lang}/`]: getGuideSidebar(lang),
   };
 }
 
-function getNav() {
+function getNav(lang = '') {
   return [{
     text: 'Guide',
-    link: '/',
-    activeMatch: '^/$|^/guide/'
+    link: `${lang}/`,
+    activeMatch: `^${lang}/guide`
   }, {
     text: 'About',
-    link: '/about',
-    activeMatch: '^/about'
+    link: `${lang}/about`,
+    activeMatch: `^${lang}/about`
   }];
 }
 
 module.exports = {
-  sidebar: getSidebar(),
-  nav: getNav(),
+  getSidebar,
+  getNav,
 }
