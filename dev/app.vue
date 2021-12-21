@@ -1,24 +1,22 @@
 <template>
   <div id="app">
     <ConfigProvider cls-prefix="v-">
-      <ButtonWrap></ButtonWrap>
-      <LabelWrap></LabelWrap>
+      <!-- button -->
+      <VButton>Test</VButton>
+      <!-- label -->
+      <VLabel label="Hello Wrold"></VLabel>
     </ConfigProvider>
   </div>
 </template>
 <script>
-import { ConfigProvider } from '../es';
-import ButtonWrap from './compoents/button-wrap.vue';
-import LabelWrap from './compoents/label-wrap.vue';
+import { ConfigProvider, Button, Label } from '../src';
 
 export default {
-  name: 'ServeDev',
+  name: 'App',
   components: {
     ConfigProvider,
-    ButtonWrap,
-    LabelWrap,
+    VButton: Button,
+    VLabel: Label,
   },
 };
 </script>
-
-<style src="../src/styles/index.scss" lang="scss"></style>

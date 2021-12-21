@@ -15,6 +15,9 @@ function getGuideSidebar(lang) {
   return [{
       text: 'Base',
       children: [{
+        text: 'Start',
+        link: `${lang}/guide/base/start`
+      }, {
         text: 'Install',
         link: `${lang}/guide/base/install`
       }]
