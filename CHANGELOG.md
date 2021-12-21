@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.5.2](https://github.com/ckpack/v-ui-template/compare/v1.5.1...v1.5.2) (2021-12-21)
+
+
+### Bug Fixes
+
+* 修改组件默认样式文件名称 ([deb37c3](https://github.com/ckpack/v-ui-template/commit/deb37c38176fba2a0a7a4ad745ea0f85e3a66424))
+* 优化eslint ([9b34c7d](https://github.com/ckpack/v-ui-template/commit/9b34c7d306aeb31e04fef997a6ad81b6527a97b1))
+* update dev ([5396bf8](https://github.com/ckpack/v-ui-template/commit/5396bf8cd23f5f737196499e5fc612708ebf438d))
+* update dev file compoent name ([2932488](https://github.com/ckpack/v-ui-template/commit/2932488e431f46438ad006d869f97e7c3bcbc58f))
+* update gen script ([2850c98](https://github.com/ckpack/v-ui-template/commit/2850c982f02c89a9ef147cb6580dc77249e43cfc))
+* update gen script ([4088355](https://github.com/ckpack/v-ui-template/commit/408835588014bf335f88ce70c393b98d5c679eb5))
+
 ### [1.5.1](https://github.com/ckpack/v-ui-template/compare/v1.5.0...v1.5.1) (2021-12-20)
 
 
