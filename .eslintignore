@@ -1,4 +1,6 @@
 dist/
+dev/dist/
 es/
 website/
 node_modules/
+

@@ -1,22 +1,22 @@
-<template>
+yar<template>
   <div id="app">
     <ConfigProvider cls-prefix="v-">
-      <PVButton></PVButton>
-      <PVLabel></PVLabel>
+      <PButton></PButton>
+      <PLabel></PLabel>
     </ConfigProvider>
   </div>
 </template>
 <script>
 import { ConfigProvider } from '../es';
-import PVButton from './preview/v-button.vue';
-import PVLabel from './preview/v-label.vue';
+import PButton from './preview/button.vue';
+import PLabel from './preview/label.vue';
 
 export default {
   name: 'ServeDev',
   components: {
     ConfigProvider,
-    PVButton,
-    PVLabel,
+    PButton,
+    PLabel,
   },
 };
 </script>

@@ -1,5 +1,7 @@
 node_modules/
 dist/
+dev/dist/
 es/
 website/
+yarn-error.log
 
