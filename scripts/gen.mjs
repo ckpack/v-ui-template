@@ -5,7 +5,8 @@ function formatComponent(component) {
 }
 
 const basePath = process.cwd();
-const componentName = process.argv.slice(2).join(' ');
+// const componentName = process.argv.slice(2).join(' ');
+const componentName = 'select';
 const formatComponentName = formatComponent(componentName);
 
 if (!/^[a-z]+(-[a-z]+){0,}$/.test(componentName)) {
@@ -20,27 +21,26 @@ if (fs.existsSync(`${basePath}/src/components/${componentName}`)) {
 fs.mkdirSync(`${basePath}/src/components/${componentName}`);
 
 fs.writeFileSync(`${basePath}/src/components/${componentName}/${componentName}.vue`, `<template>
-  <div :class="\`\${CSS_PREFIX}${componentName}\`"></div>
+  <div :class="prefix"></div>
 </template>
 
 <script>
-import { CSS_PREFIX } from '@/defaultConfig';
+import { getClsPrefix } from '@/defaultConfig';
 
 export default {
   name: '${formatComponentName}',
   setup() {
+    const prefix = getClsPrefix('${componentName}');
     return {
-      CSS_PREFIX,
+      prefix,
     };
   },
 };
 </script>
-
-<style src="./${componentName}.scss" lang="scss"></style>
 `);
-fs.writeFileSync(`${basePath}/src/components/${componentName}/${componentName}.scss`, `@import '../../styles/var.scss';
+fs.writeFileSync(`${basePath}/src/components/${componentName}/${componentName}.scss`, `@use '../../styles/_variables' as *;';
 
-.${componentName} {}`);
+.#{$cls-prefix}${componentName} {}`);
 fs.writeFileSync(`${basePath}/src/components/${componentName}/index.js`, `import ${formatComponentName} from './${componentName}.vue';
 import { withInstallComponent } from '@/utils/compoent';
 
