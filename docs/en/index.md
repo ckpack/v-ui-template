@@ -5,7 +5,7 @@
 ## Features
 
 + Quickly add new components via commands
-+ So components support on-demand loading by default
++ All components support on-demand loading by default
 + Customizable component prefix to avoid component name and style conflicts
 + Support component library document generation
 + Support generating `CHANGELOG` by default
@@ -31,7 +31,7 @@ yarn lint
 yarn release
 
 # Generate documentation related commands
-yarn docs:dev
+yarn docs:build
 ```
 
 ## Example
@@ -121,6 +121,6 @@ import 'v-ui-template/dist/index.css';
 #### Introduce styles on demand
 
 ```js
-import 'v-ui-template/es/components/button/button.css';
-import 'v-ui-template/es/components/label/label.css';
+import 'v-ui-template/es/components/button/index.css';
+import 'v-ui-template/es/components/label/index.css';
 ```

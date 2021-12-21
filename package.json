@@ -22,15 +22,19 @@
   ],
   "scripts": {
     "dev": "vue-cli-service serve dev/serve.js",
-    "build": "npm run gen:compoents && npm run build:es && npm run build:dist",
-    "build:es": "rm -rf ./es && rollup --config ./build/build.es.js && npm run build:style",
-    "build:dist": "rm -rf ./dist && rollup --config ./build/build.dist.js && sass --no-source-map --style=compressed ./src/styles/index.scss:dist/index.css",
-    "build:style": "sass --no-source-map --style=compressed ./src:es",
+    "prebuild": "rm -rf ./es && rm -rf ./dist && npm run gen:compoents",
+    "build": "npm run build:es && npm run build:dist",
+    "postbuild": "npm run build:style",
+    "build:es": "rollup --config ./build/build.es.js",
+    "build:dist": "rollup --config ./build/build.dist.js",
+    "build:style": "sass --no-source-map --style=compressed ./src:es && sass --no-source-map --style=compressed ./src/styles/index.scss:dist/index.css",
     "build:website": "vue-cli-service build --dest website dev/serve.js",
     "lint": "eslint --fix --ext .js,.vue ./",
-    "gen": "node ./scripts/gen.mjs && npm run gen:compoents",
+    "gen": "node ./scripts/gen.mjs",
+    "postgen": "npm run gen:compoents",
     "gen:compoents": "node ./scripts/gen-compoents.mjs",
-    "release": "standard-version && git push &&  git push origin --tags",
+    "release": "standard-version",
+    "postrelease": "git push &&  git push origin --tags",
     "prepare": "husky install",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
@@ -39,9 +43,9 @@
   "devDependencies": {
     "@commitlint/cli": "^15.0.0",
     "@commitlint/config-conventional": "^15.0.0",
-    "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-alias": "^3.1.8",
     "@rollup/plugin-commonjs": "^21.0.1",
+    "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^13.1.1",
     "@vue/cli-service": "^4.5.15",
     "@vue/compiler-sfc": "^3.2.26",
@@ -71,5 +75,7 @@
       "eslint --fix"
     ]
   },
-  "dependencies": {}
+  "dependencies": {
+    "sass-loader": "^12.4.0"
+  }
 }

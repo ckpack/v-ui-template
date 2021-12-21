@@ -5,7 +5,7 @@
 ## 功能特点
 
 + 通过命令快速添加新组件
-+ 所以组件默认支持按需加载
++ 所有组件默认支持按需加载
 + 可自定义组件前缀，避免组件名称、样式冲突
 + 支持组件库文档生成
 + 默认支持生成`CHANGELOG`
@@ -30,7 +30,7 @@ yarn lint
 yarn release
 
 # 生成文档相关命令
-yarn docs:dev
+yarn docs:build
 ```
 
 ## 用例
@@ -119,6 +119,6 @@ import 'v-ui-template/dist/index.css';
 #### 按需引入样式
 
 ```js
-import 'v-ui-template/es/components/button/button.css';
-import 'v-ui-template/es/components/label/label.css';
+import 'v-ui-template/es/components/button/index.css';
+import 'v-ui-template/es/components/label/index.css';
 ```

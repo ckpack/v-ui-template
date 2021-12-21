@@ -13,4 +13,11 @@ ${components.map((name) => `import ${formatComponent(name)} from '@/components/$
 \nexport {\n${components.map((name) => `  ${formatComponent(name)},\n`).join('')}};\n`;
 }
 
+function getCompoentsStyle() {
+  const components = fs.readdirSync(`${basePath}/src/components`);
+  return `/* Do not modify the automatically generated code */
+${components.map((name) => `@use '../components/${name}/index.scss' as ${name};`).join('\n')}`;
+}
+
 fs.writeFileSync(`${basePath}/src/components.js`, getCompoentsJS());
+fs.writeFileSync(`${basePath}/src/styles/index.scss`, getCompoentsStyle());

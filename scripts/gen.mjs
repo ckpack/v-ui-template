@@ -5,8 +5,7 @@ function formatComponent(component) {
 }
 
 const basePath = process.cwd();
-// const componentName = process.argv.slice(2).join(' ');
-const componentName = 'select';
+const componentName = process.argv.slice(2).join(' ');
 const formatComponentName = formatComponent(componentName);
 
 if (!/^[a-z]+(-[a-z]+){0,}$/.test(componentName)) {
@@ -38,11 +37,11 @@ export default {
 };
 </script>
 `);
-fs.writeFileSync(`${basePath}/src/components/${componentName}/${componentName}.scss`, `@use '../../styles/_variables' as *;';
+fs.writeFileSync(`${basePath}/src/components/${componentName}/${componentName}.scss`, `@use '../../styles/_variables' as *;
 
 .#{$cls-prefix}${componentName} {}`);
 fs.writeFileSync(`${basePath}/src/components/${componentName}/index.js`, `import ${formatComponentName} from './${componentName}.vue';
 import { withInstallComponent } from '@/utils/compoent';
 
-export default withInstallComponent(${formatComponentName});;
+export default withInstallComponent(${formatComponentName});
 `);
