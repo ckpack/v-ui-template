@@ -8,7 +8,7 @@ import { terser } from 'rollup-plugin-terser';
 import { NAME } from '../src/defaultConfig';
 import { dependencies } from '../package.json';
 
-const projectRoot = path.resolve(__dirname, '../src');
+const projectRoot = `${path.resolve()}/src`;
 const globals = {
   // Provide global variable names to replace your external imports, eg. jquery: '$'
   vue: 'Vue',

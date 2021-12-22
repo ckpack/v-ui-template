@@ -1,8 +1,8 @@
-const fs = require('fs');
-const path = require('path');
+import fs from "fs";
+import path from "path";
 
 function getCompoents(lang){
-  return fs.readdirSync(path.join(__dirname, '../guide/compoents')).filter(compoent => /^[a-zA-Z].+\.md$/.test(compoent)).map((compoent) => {
+  return fs.readdirSync(`${path.resolve()}/docs/guide/compoents`).filter(compoent => /^[a-zA-Z].+\.md$/.test(compoent)).map((compoent) => {
     const name = compoent.split('.').shift();
     return {
       text: name,
@@ -48,7 +48,7 @@ function getNav(lang = '') {
   }];
 }
 
-module.exports = {
+export {
   getSidebar,
   getNav,
 }

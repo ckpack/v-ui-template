@@ -8,7 +8,7 @@ export default defineConfig({
   root: './dev',
   resolve: {
     alias: {
-      '@': path.join(__dirname, '/src'),
+      '@': `${path.resolve()}/src`,
     },
   },
 });

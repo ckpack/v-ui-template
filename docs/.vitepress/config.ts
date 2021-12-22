@@ -1,7 +1,7 @@
-const { getNav, getSidebar } = require('./bar');
-const { name, description, repository } = require('../../package.json');
+import { getNav, getSidebar } from "./bar.js";
+import { name, description, repository } from "../../package.json";
 
-module.exports = {
+export default {
   title: name,
   description: description,
   base: `/${name}/`,
