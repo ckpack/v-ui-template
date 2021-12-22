@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.6.0](https://github.com/ckpack/v-ui-template/compare/v1.5.3...v1.6.0) (2021-12-22)
+
+
+### Features
+
+* update type to module ([22e836f](https://github.com/ckpack/v-ui-template/commit/22e836fa0a3021ffc1c03cbc8af254d515c54420))
+
 ### [1.5.3](https://github.com/ckpack/v-ui-template/compare/v1.5.2...v1.5.3) (2021-12-21)
 
 

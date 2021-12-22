@@ -2,7 +2,7 @@
   "name": "v-ui-template",
   "sideEffects": false,
   "description": "Quickly create a component library for Vue 3",
-  "version": "1.5.3",
+  "version": "1.6.0",
   "repository": "https://github.com/ckpack/v-ui-template",
   "homepage": "https://ckpack.github.io/v-ui-template/",
   "type": "module",
@@ -12,6 +12,7 @@
   "author": "chenkai",
   "keywords": [
     "vue",
+    "v-ui",
     "vue-ui",
     "sfc",
     "v-ui-template"
@@ -30,7 +31,7 @@
     "build:es": "rollup --config ./build/build.es.js",
     "build:dist": "rollup --config ./build/build.dist.js",
     "build:style": "sass --no-source-map --style=compressed ./src:es && sass --no-source-map --style=compressed ./src/styles/index.scss:dist/index.css",
-    "lint": "eslint --fix --ext .js,.vue ./",
+    "lint": "eslint --fix --ext js,ts,mjs,cjs,tsx,jsx,vue ./",
     "gen": "node ./scripts/gen.js",
     "postgen": "npm run gen:compoents",
     "gen:compoents": "node ./scripts/gen-compoents.js",
@@ -62,7 +63,7 @@
     "rollup-plugin-vue": "^6.0.0",
     "sass": "^1.45.1",
     "standard-version": "^9.3.2",
-    "vite": "^2.7.4",
+    "vite": "^2.7.6",
     "vitepress": "0.20.9",
     "vue": "3.2.26"
   },
@@ -73,7 +74,7 @@
     "node": ">=14"
   },
   "lint-staged": {
-    "*.{js,jsx,vue}": [
+    "*.{js,ts,mjs,cjs,tsx,jsx,vue}": [
       "eslint --fix"
     ]
   },
