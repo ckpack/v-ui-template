@@ -1,1 +1,0 @@
-import{_ as t,c as e,o as a,a as o}from"./app.dd6987fd.js";const m='{"title":"","description":"","frontmatter":{},"relativePath":"about.md","lastUpdated":1640079309289}',s={},r=o("p",null,"\u5173\u4E8E v-ui-template",-1),c=[r];function n(d,p,_,i,l,u){return a(),e("div",null,c)}var h=t(s,[["render",n]]);export{m as __pageData,h as default};

@@ -1,1 +1,0 @@
-import{_ as t,c as e,o as a,a as o}from"./app.dd6987fd.js";const m='{"title":"","description":"","frontmatter":{},"relativePath":"en/about.md","lastUpdated":1640079309289}',s={},n=o("p",null,"About v-ui-template",-1),r=[n];function c(d,p,_,i,l,u){return a(),e("div",null,r)}var h=t(s,[["render",c]]);export{m as __pageData,h as default};
