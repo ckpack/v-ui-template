@@ -2,7 +2,7 @@
   "name": "v-ui-template",
   "sideEffects": false,
   "description": "Quickly create a component library for Vue 3",
-  "version": "1.6.0",
+  "version": "1.7.0",
   "repository": "https://github.com/ckpack/v-ui-template",
   "homepage": "https://ckpack.github.io/v-ui-template/",
   "type": "module",

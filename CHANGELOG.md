@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.7.0](https://github.com/ckpack/v-ui-template/compare/v1.6.0...v1.7.0) (2021-12-28)
+
+
+### Features
+
+* yarn to pnpm ([6fc50a5](https://github.com/ckpack/v-ui-template/commit/6fc50a5976b26b99a814e5ad625359d4a2b2ca4a))
+
 ## [1.6.0](https://github.com/ckpack/v-ui-template/compare/v1.5.3...v1.6.0) (2021-12-22)
 
 
