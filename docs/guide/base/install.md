@@ -1,71 +1,87 @@
-## 配置参数
-当我们使用`Vue.use`安装组件时我们可以通过可选参数设置组件库的一些配置。
+## 完整引入
 
-> 如果我们没有全局引入,则可以通过`config-provider`组件提供的配置来设置(自定义组件前缀除外)。Config Provider 使用了 [Vue 的 provide/inject 特性](https://v3.vuejs.org/guide/composition-api-provide-inject.html#reactivity)
-
-### 自定义组件前缀
-
-在全局引入时我们可以通过自定义组件前缀来解决组件名称冲突的问题。
+完整引入组件库。
 
 ```js
 import { createApp } from 'vue';
 import App from '@/App.vue';
-import { Button } from 'v-ui-template';
-
-const app = createApp(App);
-app.use(Button, {
-  componentPrefix: 'K',
-});
-
-app.mount('#app');
-```
-
-在引入的组件较多时可以使用更方便的`create`函数来创建应用。
-
-```js
-import { createApp } from 'vue';
-import App from '@/App.vue';
-import { Button, Label, create } from 'v-ui-template';
+import VUI from 'v-ui-template';
+import 'v-ui-template/dist/index.scss';
 
 const app = createApp(App);
 
-app.use(create([Button, Label]), {
-  componentPrefix: 'K',
-});
+app.use(VUI);
 app.mount('#app');
 ```
 
-然后我们可以在其他地方就这样使用
+## 按需加载
+
+默认支持`tree shaking`，无需任何插件，直接引入 `import { Button } from 'v-ui-template'` 就会有按需加载的效果。
+
 
 ```html
-  <k-button @click="handlerClick">Test</k-button>
-  <k-label></k-label>
+<script>
+  import { Button as VButton } from 'v-ui-template';
+  export default {
+    components: {
+      VButton,
+    },
+  }
+</script>
+
+<template>
+  <v-button @click="handlerClick">Test</v-button>
+</template>
 ```
 
-### 自定义类名前缀
+## 浏览器直接引入
 
-我们可以通过自定义`class`前缀来解决项目样式冲突的问题。
+你也可以直接通过浏览器的`script`, `style`标签导入。
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>VUI</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/v-ui-template/dist/index.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.global.prod.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/v-ui-template/dist/index.min.js"></script>
+</head>
+<body>
+  <div id="app">
+    <v-button @click="handlerClick">Test</v-button>
+    <v-label :label="count"></v-label>
+  </div>
+</body>
+<script>
+  const app = Vue.createApp({
+    data() {
+      return {
+        count: 0,
+      };
+    },
+    methods: {
+      handlerClick() {
+        this.count += 1;
+      },
+    },
+  });
+  app.use(VUI);
+  app.mount('#app')
+</script>
+</html>
+```
+
+## 样式
+#### 全局引入样式
 
 ```js
-import { createApp } from 'vue';
-import App from '@/App.vue';
-import { Button, create } from 'v-ui-template';
-
-const app = createApp(App);
-
-app.use(Button, {
-  componentPrefix: 'K',
-  clsPrefix: 'k-',
-});
-app.mount('#app');
+import 'v-ui-template/dist/index.css';
 ```
 
-由于前缀变更，你需要直接引入并修改原始`scss`文件。
+#### 按需引入样式
 
-```scss
-@use 'v-ui-template/src/style/_variables.scss' with (
-  $cls-prefix: 'k-',
-);
-@use 'v-ui-template/src/style/index.scss';
+```js
+import 'v-ui-template/es/components/button/index.css';
+import 'v-ui-template/es/components/label/index.css';
 ```
-

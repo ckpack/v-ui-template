@@ -1,6 +1,6 @@
 # v-ui-template
 
- You can use this project to quickly create a component library based on vue 3.0. This is a super fast and super simple way to generate a vue component library!
+You can use this project to quickly create a component library based on vue 3.0. This is a super fast and super simple way to generate vue component library!
 
 ## Features
 
@@ -8,119 +8,96 @@
 + All components support on-demand loading by default
 + Customizable component prefix to avoid component name and style conflicts
 + Support component library document generation
-+ Support generating `CHANGELOG` by default
-
-## Script command
+## Script commands
 
 For detailed commands, refer to the `scripts` part of `package.json`
 
 ```bash
 # Installation dependencies
-yarn
+npm install
 
 # Add new component
-yarn gen component-name
+npm run gen component-name
 
 # Package your component library
-yarn build
+npm run build
 
 # Check the code specification
-yarn lint
+npm run lint
 
 # Generate log file to release new version
-yarn release
+npm run release
 
 # Generate documentation related commands
-yarn docs:build
+npm run docs:build
 ```
 
-## Example
 
-#### Full introduction
+## download
 
-Fully introduce the component library.
+```bash
+# git clone
+git clone https://github.com/ckpack/v-ui-template.git
 
+# download zip
+https://github.com/ckpack/v-ui-template/archive/refs/heads/main.zip
+```
+
+## Global replacement variables
+
++ `v-ui-template` is `you-project-name` such as `b-ui`
++ `ckpack` is `you-github-username` such as `my-github-username`
+
+## Modify component prefix
+
+The default component prefix is ​​`V`, you can choose to modify the component prefix
+Modify the file `src/defaultConfig.js`
 ```js
-import {createApp} from'vue';
-import App from'@/App.vue';
-import VUI from'v-ui-template';
-import 'v-ui-template/dist/index.scss';
-
-const app = createApp(App);
-
-app.use(VUI);
-app.mount('#app');
+// modify the ouput when iife format, such as `BUI`
+export const NAME ='BUI';
+// Modify the default component prefix, such as `B`
+export const COMPONENT_PREFIX ='B';
 ```
 
-#### Load on demand
+The default component class prefix is ​​`v-`, you can choose to modify the component class prefix
+Modify the file `src/styles/__variables.scss`
+```scss
+// Modify the default component class prefix such as `b-`
+$cls-prefix: b- !default;
+```
 
-By default, `tree shaking` is supported, no plug-in is needed. Directly importing `import {Button} from'v-ui-template'` will have the effect of loading on demand.
+## Start creating components
 
+Use `npm run gen component-name` to add new components. For example, execute the `npm run gen select` command, which will generate the `select` file directory under the `src/components/` directory, and edit the `select` under the folder. vue` file and `index.scss` file
 
-```html
-<script>
-  import {Button as VButton} from'v-ui-template';
-  export default {
-    components: {
-      VButton,
-    },
-  }
-</script>
+#### Preview the newly generated components
 
+Introduce new components in the file `dev/app.vue`, execute `npm run dev` to preview the new components
+```diff
 <template>
-  <v-button @click="handlerClick">Test</v-button>
-</template>
-```
-
-#### Browser Directly Introduce
-
-You can also import it directly through the browser's `script`, `style` tags.
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>VUI</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/v-ui-template/dist/index.css">
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.global.prod.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/v-ui-template/dist/index.min.js"></script>
-</head>
-<body>
   <div id="app">
-    <v-button @click="handlerClick">Test</v-button>
-    <v-label :label="count"></v-label>
+    <ConfigProvider>
++ <Select></Select>
+    </ConfigProvider>
   </div>
-</body>
-<script>
-  const app = Vue.createApp({
-    data() {
-      return {
-        count: 0,
-      };
-    },
-    methods: {
-      handlerClick() {
-        this.count += 1;
-      },
-    },
-  });
-  app.use(VUI);
-  app.mount('#app')
+</template>
+<script setup>
+import {
++ ConfigProvider, Select,
+} from'../src';
 </script>
-</html>
+
 ```
 
-## Style
+#### Add new component document
 
-#### Globally introduce styles
+Add the document corresponding to the component name in the `docs/guide/compoents` folder, execute `npm run docs:dev` to preview the document
 
-```js
-import 'v-ui-template/dist/index.css';
-```
+```md
+<!-- docs/guide/compoents/select.md -->
+# Select
 
-#### Introduce styles on demand
+Test component
 
-```js
-import 'v-ui-template/es/components/button/index.css';
-import 'v-ui-template/es/components/label/index.css';
+<v-select></v-select>
 ```

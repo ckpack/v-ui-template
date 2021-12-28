@@ -1,10 +1,10 @@
 <template>
   <div id="app">
-    <ConfigProvider cls-prefix="v-">
+    <ConfigProvider>
       <!-- button -->
-      <VButton>Test</VButton>
+      <Button>Test</Button>
       <!-- label -->
-      <VLabel label="Hello Wrold"></VLabel>
+      <Label label="Hello Wrold"></Label>
     </ConfigProvider>
   </div>
 </template>
@@ -15,8 +15,8 @@ export default {
   name: 'App',
   components: {
     ConfigProvider,
-    VButton: Button,
-    VLabel: Label,
+    Button,
+    Label,
   },
 };
 </script>

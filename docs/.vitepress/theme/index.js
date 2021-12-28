@@ -7,6 +7,8 @@ export default {
   enhanceApp({
     app
   }) {
-    app.use(VUI);
+    app.use(VUI, {
+      componentPrefix: 'V',
+    });
   }
 }
