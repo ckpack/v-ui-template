@@ -40,7 +40,8 @@
     "prepare": "husky install",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
-    "docs:serve": "vitepress serve docs"
+    "docs:serve": "vitepress serve docs",
+    "outdated": "pnpm outdated"
   },
   "devDependencies": {
     "@commitlint/cli": "^16.0.0",
@@ -63,7 +64,7 @@
     "rollup-plugin-vue": "^6.0.0",
     "sass": "^1.45.1",
     "standard-version": "^9.3.2",
-    "vite": "^2.7.7",
+    "vite": "^2.7.8",
     "vitepress": "0.20.10",
     "vue": "3.2.26"
   },
