@@ -21,7 +21,7 @@ specifiers:
   rollup-plugin-vue: ^6.0.0
   sass: ^1.45.1
   standard-version: ^9.3.2
-  vite: ^2.7.8
+  vite: ^2.7.9
   vitepress: 0.20.10
   vue: 3.2.26
 
@@ -32,7 +32,7 @@ devDependencies:
   '@rollup/plugin-commonjs': 21.0.1_rollup@2.62.0
   '@rollup/plugin-json': 4.1.0_rollup@2.62.0
   '@rollup/plugin-node-resolve': 13.1.1_rollup@2.62.0
-  '@vitejs/plugin-vue': 2.0.1_vite@2.7.8+vue@3.2.26
+  '@vitejs/plugin-vue': 2.0.1_vite@2.7.9+vue@3.2.26
   eslint: 8.5.0
   eslint-config-airbnb-base: 15.0.0_f385d671d5f1c72a868db745a891bc1f
   eslint-import-resolver-alias: 1.1.2_eslint-plugin-import@2.25.3
@@ -46,7 +46,7 @@ devDependencies:
   rollup-plugin-vue: 6.0.0
   sass: 1.45.1
   standard-version: 9.3.2
-  vite: 2.7.8_sass@1.45.1
+  vite: 2.7.9_sass@1.45.1
   vitepress: 0.20.10_sass@1.45.1
   vue: 3.2.26
 
@@ -541,14 +541,14 @@ packages:
       '@types/node': 17.0.5
     dev: true
 
-  /@vitejs/plugin-vue/2.0.1_vite@2.7.8+vue@3.2.26:
+  /@vitejs/plugin-vue/2.0.1_vite@2.7.9+vue@3.2.26:
     resolution: {integrity: sha512-wtdMnGVvys9K8tg+DxowU1ytTrdVveXr3LzdhaKakysgGXyrsfaeds2cDywtvujEASjWOwWL/OgWM+qoeM8Plg==}
     engines: {node: '>=12.0.0'}
     peerDependencies:
       vite: ^2.5.10
       vue: ^3.2.25
     dependencies:
-      vite: 2.7.8_sass@1.45.1
+      vite: 2.7.9_sass@1.45.1
       vue: 3.2.26
     dev: true
 
@@ -3523,8 +3523,8 @@ packages:
       spdx-expression-parse: 3.0.1
     dev: true
 
-  /vite/2.7.8_sass@1.45.1:
-    resolution: {integrity: sha512-NOgvRtXUq4/7srE2cTQ2IU1oERdGq2njVOlZtgRrjMO+PPJpncd61/AUzxzZklQ1zBkiWXEVrw3Csq0Sbgr0rQ==}
+  /vite/2.7.9_sass@1.45.1:
+    resolution: {integrity: sha512-CyopIJIRrc26Wnbkch5BCHFhQodzeV4jjSegLAEw1RImvXSuoOo2SfpEW9zRVi188WmjJwCqCaoG25C0r4nekw==}
     engines: {node: '>=12.2.0'}
     hasBin: true
     peerDependencies:
@@ -3555,9 +3555,9 @@ packages:
     dependencies:
       '@docsearch/css': 3.0.0-alpha.42
       '@docsearch/js': 3.0.0-alpha.42
-      '@vitejs/plugin-vue': 2.0.1_vite@2.7.8+vue@3.2.26
+      '@vitejs/plugin-vue': 2.0.1_vite@2.7.9+vue@3.2.26
       prismjs: 1.25.0
-      vite: 2.7.8_sass@1.45.1
+      vite: 2.7.9_sass@1.45.1
       vue: 3.2.26
     transitivePeerDependencies:
       - '@algolia/client-search'
