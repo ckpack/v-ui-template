@@ -1,6 +1,6 @@
 import { defineConfig } from 'rollup';
 import {
-  projectRoot, plugins, output, external,
+  projectRoot, plugins, output, external, treeshake,
 } from './build.config';
 
 const input = `${projectRoot}/index.js`;
@@ -18,6 +18,7 @@ const baseExternal = external.vue;
 export default defineConfig([
   {
     input,
+    treeshake,
     output: {
       format: 'esm',
       file: 'dist/index.js',
@@ -30,6 +31,7 @@ export default defineConfig([
   },
   {
     input,
+    treeshake,
     output: {
       format: 'iife',
       file: 'dist/index.min.js',

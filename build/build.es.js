@@ -1,7 +1,7 @@
 import { defineConfig } from 'rollup';
 import glob from 'glob';
 import {
-  projectRoot, plugins, output, external,
+  projectRoot, plugins, output, external, treeshake,
 } from './build.config';
 
 const input = glob.sync('src/**/*.js', {
@@ -11,6 +11,7 @@ const input = glob.sync('src/**/*.js', {
 export default defineConfig([
   {
     input,
+    treeshake,
     output: {
       format: 'esm',
       dir: 'es/',

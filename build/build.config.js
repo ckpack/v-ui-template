@@ -49,7 +49,12 @@ const external = {
   dependencies: dependencies ? Object.keys(dependencies) : [],
 };
 
+const treeshake = {
+  preset: 'smallest',
+};
+
 export {
+  treeshake,
   projectRoot,
   plugins,
   output,
