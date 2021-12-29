@@ -1,3 +1,4 @@
+import { defineConfig } from 'rollup';
 import {
   projectRoot, plugins, output, external,
 } from './build.config';
@@ -14,7 +15,7 @@ const basePlugins = [
 
 const baseExternal = external.vue;
 
-export default [
+export default defineConfig([
   {
     input,
     output: {
@@ -42,4 +43,4 @@ export default [
     ],
     external: baseExternal,
   },
-];
+]);

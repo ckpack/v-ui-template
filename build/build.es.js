@@ -1,3 +1,4 @@
+import { defineConfig } from 'rollup';
 import glob from 'glob';
 import {
   projectRoot, plugins, output, external,
@@ -7,7 +8,7 @@ const input = glob.sync('src/**/*.js', {
   nodir: true,
 });
 
-export default [
+export default defineConfig([
   {
     input,
     output: {
@@ -24,4 +25,4 @@ export default [
     ],
     external: [...external.vue, ...external.dependencies],
   },
-];
+]);
