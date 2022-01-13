@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.8.0](https://github.com/ckpack/v-ui-template/compare/v1.7.0...v1.8.0) (2022-01-13)
+
+
+### Features
+
+* add outdated script ([3defe32](https://github.com/ckpack/v-ui-template/commit/3defe324960a0965fd5fa7a8f5666daf2d4bf334))
+* add treeshake options ([8fee420](https://github.com/ckpack/v-ui-template/commit/8fee420c026ebbdc5f4845a8b6aeee1346ee268a))
+* update package version ([1b905a7](https://github.com/ckpack/v-ui-template/commit/1b905a72912b41c1b6f49f1a821ba42ed16cf0be))
+* update vitepress version ([33bb163](https://github.com/ckpack/v-ui-template/commit/33bb1638ffabe592aeed8a2b52796bb2d6095464))
+* 打包工具从rollup迁移到vite ([75d172c](https://github.com/ckpack/v-ui-template/commit/75d172c3bb386fda6c19b11aeb6fb238b4e1f50d))
+
 ## [1.7.0](https://github.com/ckpack/v-ui-template/compare/v1.6.0...v1.7.0) (2021-12-28)
 
 
