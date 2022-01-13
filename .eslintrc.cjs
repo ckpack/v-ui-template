@@ -1,33 +1,19 @@
 module.exports = {
-  extends: ['plugin:vue/vue3-essential', 'airbnb-base'],
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
+  root: true,
+  env: {
+    node: true,
   },
-  plugins: ['vue'],
+  extends: [
+    'plugin:vue/vue3-recommended',
+    'airbnb-base',
+  ],
   rules: {
-    'import/prefer-default-export': 'off',
-    'import/no-extraneous-dependencies': ['error', {
-      devDependencies: ['**/build/*', '**/dev/*', 'vite.config.js'],
-    }],
+    'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'vue/multi-word-component-names': 0,
-    'max-len': ['error', {
-      code: 2000,
-    }],
-    'no-console': 0,
+    'vue/require-default-prop': 0,
+    'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
+    'import/prefer-default-export': 0,
     'no-param-reassign': 0,
-  },
-  overrides: [{
-    files: ['*.js', '.json', '*.vue'],
-  }],
-  settings: {
-    'import/resolver': {
-      alias: {
-        map: [
-          ['@', './src'],
-        ],
-      },
-      extensions: ['.js', '.scss', '.json', '.vue'],
-    },
   },
 };

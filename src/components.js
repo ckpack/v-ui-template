@@ -1,7 +1,6 @@
-/* Do not modify the automatically generated code */
-import Button from '@/components/button';
-import ConfigProvider from '@/components/config-provider';
-import Label from '@/components/label';
+import Button from './components/button';
+import ConfigProvider from './components/config-provider';
+import Label from './components/label';
 
 export {
   Button,

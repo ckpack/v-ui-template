@@ -1,10 +1,10 @@
 <template>
-  <slot></slot>
+  <slot />
 </template>
 
 <script>
 import { defineComponent, provide, reactive } from 'vue';
-import { configProvideInjectKey, CLS_PREFIX } from '@/defaultConfig';
+import { configProvideInjectKey, CLS_PREFIX } from '../../defaultConfig';
 
 export default defineComponent({
   name: 'ConfigProvider',

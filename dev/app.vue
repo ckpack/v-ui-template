@@ -4,7 +4,7 @@
       <!-- button -->
       <Button>Test</Button>
       <!-- label -->
-      <Label label="Hello Wrold"></Label>
+      <Label label="Hello Wrold" />
     </ConfigProvider>
   </div>
 </template>

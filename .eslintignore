@@ -1,6 +1,5 @@
-dist/
-dev/dist/
-es/
-website/
-node_modules/
-
+node_modules
+es
+libs
+dist
+dev/dist

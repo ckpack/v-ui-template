@@ -2,9 +2,6 @@
   "compilerOptions": {
     "baseUrl": ".",
     "checkJs": false,
-    "paths": {
-      "@/*": ["src/*"]
-    }
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "dist", "es", "website"]

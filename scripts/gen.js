@@ -20,13 +20,14 @@ if (fs.existsSync(`${basePath}/src/components/${componentName}`)) {
 fs.mkdirSync(`${basePath}/src/components/${componentName}`);
 
 fs.writeFileSync(`${basePath}/src/components/${componentName}/${componentName}.vue`, `<template>
-  <div :class="prefix"></div>
+  <div :class="prefix">\n    ${componentName}\n  </div>
 </template>
 
 <script>
-import { getClsPrefix } from '@/defaultConfig';
+import { defineComponent } from 'vue';
+import { getClsPrefix } from '../../defaultConfig';
 
-export default {
+export default defineComponent({
   name: '${formatComponentName}',
   setup() {
     const prefix = getClsPrefix('${componentName}');
@@ -34,14 +35,14 @@ export default {
       prefix,
     };
   },
-};
+});
 </script>
 `);
 fs.writeFileSync(`${basePath}/src/components/${componentName}/index.scss`, `@use '../../styles/_variables' as *;
 
 .#{$cls-prefix}${componentName} {}`);
 fs.writeFileSync(`${basePath}/src/components/${componentName}/index.js`, `import ${formatComponentName} from './${componentName}.vue';
-import { withInstallComponent } from '@/utils/compoent';
+import { withInstallComponent } from '../../utils/compoent';
 
 export default withInstallComponent(${formatComponentName});
 `);

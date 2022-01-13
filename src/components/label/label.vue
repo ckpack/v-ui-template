@@ -1,12 +1,12 @@
 <template>
   <div :class="prefix">
-    {{label}}
+    {{ label }}
   </div>
 </template>
 
 <script>
 import { defineComponent } from 'vue';
-import { getClsPrefix } from '@/defaultConfig';
+import { getClsPrefix } from '../../defaultConfig';
 
 export default defineComponent({
   name: 'Label',

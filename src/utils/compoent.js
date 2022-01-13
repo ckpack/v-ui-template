@@ -1,4 +1,4 @@
-import { getComponentPrefix } from '@/defaultConfig';
+import { getComponentPrefix } from '../defaultConfig';
 
 export const withInstallComponent = (main, extra = {}) => {
   main.install = (app, options = {}) => {
