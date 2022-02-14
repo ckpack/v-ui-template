@@ -16,7 +16,6 @@ export default build({
     minify: false,
     brotliSize: false,
     rollupOptions: {
-      input: './src',
       output: {
         entryFileNames: '[name].js',
         preserveModules: true,
@@ -25,6 +24,7 @@ export default build({
       external,
     },
     lib: {
+      entry: './src',
       formats: ['es'],
     },
   },
