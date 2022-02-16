@@ -48,9 +48,9 @@
     "lint-staged": "^12.3.4",
     "standard-version": "^9.3.2",
     "sass": "^1.49.7",
-    "vite": "^2.8.1",
+    "vite": "^2.8.3",
     "@vitejs/plugin-vue": "^2.2.0",
-    "vitepress": "^0.22.1",
+    "vitepress": "^0.22.2",
     "vue": "^3.2.31"
   },
   "peerDependencies": {
