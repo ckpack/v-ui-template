@@ -2,7 +2,7 @@
   "name": "v-ui-template",
   "sideEffects": false,
   "description": "Quickly create a component library for Vue 3",
-  "version": "1.8.0",
+  "version": "1.9.0",
   "repository": "https://github.com/ckpack/v-ui-template",
   "homepage": "https://ckpack.github.io/v-ui-template/",
   "type": "module",
@@ -66,14 +66,39 @@
   },
   "standard-version": {
     "types": [
-      {"type": "feat", "section": "Features"},
-      {"type": "fix", "section": "Bug Fixes"},
-      {"type": "chore", "section": "Chore"},
-      {"type": "docs", "section": "Docs" },
-      {"type": "style", "section": "Style" },
-      {"type": "refactor", "section": "Refactor" },
-      {"type": "perf", "section": "Perf" },
-      {"type": "test", "section": "Test" }]
+      {
+        "type": "feat",
+        "section": "Features"
+      },
+      {
+        "type": "fix",
+        "section": "Bug Fixes"
+      },
+      {
+        "type": "chore",
+        "section": "Chore"
+      },
+      {
+        "type": "docs",
+        "section": "Docs"
+      },
+      {
+        "type": "style",
+        "section": "Style"
+      },
+      {
+        "type": "refactor",
+        "section": "Refactor"
+      },
+      {
+        "type": "perf",
+        "section": "Perf"
+      },
+      {
+        "type": "test",
+        "section": "Test"
+      }
+    ]
   },
   "dependencies": {}
 }

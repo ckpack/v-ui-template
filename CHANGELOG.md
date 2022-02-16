@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.9.0](https://github.com/ckpack/v-ui-template/compare/v1.8.0...v1.9.0) (2022-02-16)
+
+
+### Features
+
+* add standard-version config ([bdde893](https://github.com/ckpack/v-ui-template/commit/bdde893bb81b25cfd6149d7d6ea36b2543294f6b))
+* 更新依赖库 ([a91aa3a](https://github.com/ckpack/v-ui-template/commit/a91aa3a67daafda35e154ad8b1fd8d027efebcaa))
+
+
+### Bug Fixes
+
+* external error ([f250e86](https://github.com/ckpack/v-ui-template/commit/f250e86591df5ee3338fdbd68968dfedb7aa70ee))
+* 修复lib 模式下读取lib.entry参数异常 ([30f9982](https://github.com/ckpack/v-ui-template/commit/30f99820b56272729bb6408e4b7ff6663265cd54))
+
 ## [1.8.0](https://github.com/ckpack/v-ui-template/compare/v1.7.0...v1.8.0) (2022-01-13)
 
 
