@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.9.1](https://github.com/ckpack/v-ui-template/compare/v1.9.0...v1.9.1) (2022-02-16)
+
+
+### Features
+
+* 拆分change log 配置文件 ([d5eb0a3](https://github.com/ckpack/v-ui-template/commit/d5eb0a391b86c65a6e58df38842d97e4c427a147))
+
 ## [1.9.0](https://github.com/ckpack/v-ui-template/compare/v1.8.0...v1.9.0) (2022-02-16)
 
 
