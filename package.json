@@ -59,7 +59,7 @@
     "sass": "1.50.0",
     "standard-version": "9.3.2",
     "vite": "2.9.1",
-    "vitepress": "0.22.3",
+    "vitepress": "0.20.10",
     "vue": "3.2.31"
   },
   "peerDependencies": {

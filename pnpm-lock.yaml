@@ -14,7 +14,7 @@ specifiers:
   standard-version: 9.3.2
   v-ui-template: file:./
   vite: 2.9.1
-  vitepress: 0.22.3
+  vitepress: 0.20.10
   vue: 3.2.31
 
 devDependencies:
@@ -31,7 +31,7 @@ devDependencies:
   standard-version: 9.3.2
   v-ui-template: 'link:'
   vite: 2.9.1_sass@1.50.0
-  vitepress: 0.22.3_sass@1.50.0
+  vitepress: 0.20.10_sass@1.50.0
   vue: 3.2.31
 
 packages:
@@ -3359,9 +3359,9 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitepress/0.22.3_sass@1.50.0:
-    resolution: {integrity: sha512-Yfvu/rent2vp/TXIDZMutS6ft2TJPn4xngS48PYFWDEbuFI2ccUAXM481lF1qVVnCKxfh4g8e/KPvevSJdg1Bw==}
-    engines: {node: '>=14.0.0'}
+  /vitepress/0.20.10_sass@1.50.0:
+    resolution: {integrity: sha512-dKgH6k1yxdEjIIxoXGI0vMg3lpBLvMarre/vvt4beuxd+rXOUB1a7DAtXDmgIXOMGQ7IcF+4zyd2132IedhjtQ==}
+    engines: {node: '>=12.0.0'}
     hasBin: true
     dependencies:
       '@docsearch/css': 3.0.0-alpha.50
