@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.11.0](https://github.com/ckpack/v-ui-template/compare/v1.10.0...v1.11.0) (2022-04-11)
+
+
+### Features
+
+* add vitest ([1c87029](https://github.com/ckpack/v-ui-template/commit/1c8702970a001db51cfb6a4d0a5ae8b6ed40e6dc))
+
 ## [1.10.0](https://github.com/ckpack/v-ui-template/compare/v1.9.1...v1.10.0) (2022-04-11)
 
 
