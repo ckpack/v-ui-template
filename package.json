@@ -10,6 +10,14 @@
   "unpkg": "dist/index.iife.js",
   "module": "es/index.js",
   "author": "ckvv",
+  "exports": {
+    ".": {
+      "import": "./es/index.js",
+      "require": "./dist/index.cjs.js"
+    },
+    "./dist/*": "./dist/*",
+    "./src/*": "./src/*"
+  },
   "keywords": [
     "vue",
     "v-ui",
@@ -38,18 +46,19 @@
     "postgen": "node ./scripts/gen-compoents.js"
   },
   "devDependencies": {
+    "v-ui-template": "file:./",
     "@commitlint/cli": "16.2.3",
     "@commitlint/config-conventional": "16.2.1",
-    "eslint": "8.12.0",
-    "eslint-plugin-vue": "8.6.0",
-    "eslint-plugin-import": "2.26.0",
+    "@vitejs/plugin-vue": "2.3.1",
+    "eslint": "8.13.0",
     "eslint-config-airbnb-base": "15.0.0",
+    "eslint-plugin-import": "2.26.0",
+    "eslint-plugin-vue": "8.6.0",
     "husky": "7.0.4",
     "lint-staged": "12.3.7",
-    "standard-version": "9.3.2",
     "sass": "1.50.0",
+    "standard-version": "9.3.2",
     "vite": "2.9.1",
-    "@vitejs/plugin-vue": "2.3.1",
     "vitepress": "0.22.3",
     "vue": "3.2.31"
   },

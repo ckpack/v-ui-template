@@ -1,5 +1,4 @@
 # Label
 
-测试组件
-
-<v-label label="Hello Wrold"></v-label>
+<<< @/demo/label/base.vue
+--demo 这是一个标签
