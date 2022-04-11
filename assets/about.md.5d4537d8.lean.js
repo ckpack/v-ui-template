@@ -1,1 +1,0 @@
-import{_ as t,y as e,x as a,D as o}from"./plugin-vue_export-helper.54ce3857.js";const m='{"title":"","description":"","frontmatter":{},"relativePath":"about.md","lastUpdated":1649664414221}',s={},r=o("p",null,"\u5173\u4E8E v-ui-template",-1),n=[r];function c(_,p,d,i,l,u){return a(),e("div",null,n)}var h=t(s,[["render",c]]);export{m as __pageData,h as default};
