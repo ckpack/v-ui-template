@@ -43,7 +43,9 @@
     "docs:build": "vitepress build docs",
     "docs:serve": "vitepress serve docs",
     "gen": "node ./scripts/gen.js",
-    "postgen": "node ./scripts/gen-compoents.js"
+    "postgen": "node ./scripts/gen-compoents.js",
+    "test": "vitest",
+    "coverage": "vitest --coverage"
   },
   "devDependencies": {
     "v-ui-template": "file:./",
@@ -60,7 +62,11 @@
     "standard-version": "9.3.2",
     "vite": "2.9.1",
     "vitepress": "0.20.10",
-    "vue": "3.2.31"
+    "vue": "3.2.31",
+    "vitest": "0.9.3",
+    "@vue/test-utils": "2.0.0-rc.19",
+    "happy-dom": "2.55.0",
+    "c8": "7.11.0"
   },
   "peerDependencies": {
     "vue": "3.2.x"
@@ -72,6 +78,5 @@
     "*.{js,ts,mjs,cjs,tsx,jsx,vue}": [
       "eslint --fix"
     ]
-  },
-  "dependencies": {}
+  }
 }
