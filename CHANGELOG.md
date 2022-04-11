@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.10.0](https://github.com/ckpack/v-ui-template/compare/v1.9.1...v1.10.0) (2022-04-11)
+
+
+### Features
+
+* add markdown plugin ([359e29f](https://github.com/ckpack/v-ui-template/commit/359e29ffc2db64ef2f6a2d149ab01667f86ddb0c))
+* 更新依赖 ([d51bd15](https://github.com/ckpack/v-ui-template/commit/d51bd1530e94b65528d773194b3d4285b10edcac))
+
+
+### Bug Fixes
+
+* revert vitepress version ([038da73](https://github.com/ckpack/v-ui-template/commit/038da73aaeb1bbc1626307c6760a7ef5c432172e))
+
 ### [1.9.1](https://github.com/ckpack/v-ui-template/compare/v1.9.0...v1.9.1) (2022-02-16)
 
 
